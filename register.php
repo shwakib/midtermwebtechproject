@@ -34,9 +34,9 @@
 					<tr>
 						<td>Gender</td>
 						<td>
-							<input type="radio" name="Gender" value="Male">Male
-							<input type="radio" name="Gender">Female
-							<input type="radio" name="Gender">Others
+							<input type="radio" name="gender" value="Male">Male
+							<input type="radio" name="gender" value="Female">Female
+							<input type="radio" name="gender" value="Others">Others
 						</td>
 					</tr>
 
@@ -59,11 +59,11 @@
 						<td>
 							<select name="rbloodgroup">
 								<option value="A+">A+</option>
-								<option>A-</option>
-								<option>B+</option>
-								<option>B-</option>
-								<option>O+</option>
-								<option>O-</option>
+								<option value="A-">A-</option>
+								<option value="B+">B+</option>
+								<option value="B-">B-</option>
+								<option value="O+">O+</option>
+								<option value="O-">O-</option>
 							</select>
 						</td>
 					</tr>	
@@ -74,8 +74,8 @@
 						</td>
 						<td>
 							<input type="radio" name="utype" value="Doctor">Doctor
-							<input type="radio" name="utype">Patient
-							<input type="radio" name="utype">Staff
+							<input type="radio" name="utype" value="Patient">Patient
+							<input type="radio" name="utype" value="Staff">Staff
 						</td>
 					</tr>
 
