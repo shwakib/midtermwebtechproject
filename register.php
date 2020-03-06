@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<form>
+	<form method="POST" action="registrationuser.php">
 		<fieldset>
 			<legend>
 				Registration
@@ -27,9 +27,14 @@
 					</tr>
 
 					<tr>
+						<td>Confirm Password</td>
+						<td><input type="password" name="rconfirmpassword"></td>
+					</tr>
+
+					<tr>
 						<td>Gender</td>
 						<td>
-							<input type="radio" name="Gender">Male
+							<input type="radio" name="Gender" value="Male">Male
 							<input type="radio" name="Gender">Female
 							<input type="radio" name="Gender">Others
 						</td>
@@ -42,14 +47,18 @@
 
 					<tr>
 						<td>Date Of Birth</td>
-						<td><input type="Date" name="rdate"></td>
+						<td><!-- <input type="Date" name="rdate"> -->
+							<input type="text" size="2" name="date">/
+							<input type="text" size="2" name="month">/
+							<input type="text" size="2" name="year">
+						</td>
 					</tr>
 
 					<tr>
 						<td>Blood Group</td>
 						<td>
-							<select>
-								<option>A+</option>
+							<select name="rbloodgroup">
+								<option value="A+">A+</option>
 								<option>A-</option>
 								<option>B+</option>
 								<option>B-</option>
@@ -64,16 +73,25 @@
 							User Type
 						</td>
 						<td>
-							<input type="radio" name="utype">Doctor
+							<input type="radio" name="utype" value="Doctor">Doctor
 							<input type="radio" name="utype">Patient
 							<input type="radio" name="utype">Staff
 						</td>
-					</tr>				
-				</table> <br>
+					</tr>
 
-			<input type="submit" name="rsubmit" value="Create Account">	
-			<a href="login.php">Login</a>
-			<a href="" align="right">Home</a>
+					<tr>
+						<td>
+										<input type="submit" name="submit" value="Create Account">	
+										<a href="login.php">Login</a>
+						</td>
+						<td align="right">
+							<a href="" align="right">Home</a>
+						</td>
+					</tr>				
+				</table> 
+
+
+			
 
 
 		</fieldset>
