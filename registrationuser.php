@@ -2,7 +2,7 @@
 
 if(isset($_REQUEST['submit']))
 {
-	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail']) || empty($_REQUEST['date']) || empty($_REQUEST['month']) || empty($_REQUEST['year']) || empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['utype']))
+	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail']) /*|| empty($_REQUEST['date']) || empty($_REQUEST['month']) || empty($_REQUEST['year']) */||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['utype']))
 		{
 		echo "Field Cannot Be Empty";
 		}
@@ -10,16 +10,16 @@ if(isset($_REQUEST['submit']))
 	{
 		if($_REQUEST['rpassword']==$_REQUEST['rconfirmpassword'])
 		{
-			$data=$_REQUEST['date'];
+			/*$data=$_REQUEST['date'];
 			$data.=$_REQUEST['month'];
-			$data.=$_REQUEST['year'];
+			$data.=$_REQUEST['year'];*/
 
 			$name=$_REQUEST['rname'];
 			$id=$_REQUEST['rid'];
 			$password=$_REQUEST['rpassword'];
 			$gender=$_REQUEST['Gender'];
 			$email=$_REQUEST['remail'];
-			$dob=$data;
+			$dob=$_REQUEST['rdate'];
 			$bg=$_REQUEST['rbloodgroup'];
 			$type=$_REQUEST['utype'];
 			$myfile=fopen('userregistration.txt','a');

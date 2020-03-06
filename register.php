@@ -47,10 +47,11 @@
 
 					<tr>
 						<td>Date Of Birth</td>
-						<td><!-- <input type="Date" name="rdate"> -->
-							<input type="text" size="2" name="date">/
+						<td>
+							<input type="Date" name="rdate">
+							<!-- <input type="text" size="2" name="date">/
 							<input type="text" size="2" name="month">/
-							<input type="text" size="2" name="year">
+							<input type="text" size="2" name="year"> -->
 						</td>
 					</tr>
 
