@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<form>
+	<form method="POST" action="loginverify.php">
 		<fieldset>
 			<legend>
 				LOGIN
@@ -16,7 +16,7 @@
 							<input type="text" name="uid" value="01-885789"> <br>
 							Password: <br>
 							<input type="password" name="upassword"> <br> <br>
-							<input type="submit" name="login" value="Login">
+							<input type="submit" name="submit" value="Login">
 							<u><a href="register.php">Register</a></u>
 				</center>
 

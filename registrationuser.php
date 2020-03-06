@@ -2,7 +2,7 @@
 
 if(isset($_REQUEST['submit']))
 {
-	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail']) /*|| empty($_REQUEST['date']) || empty($_REQUEST['month']) || empty($_REQUEST['year']) */||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['utype']))
+	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail'])||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['utype']))
 		{
 		echo "Field Cannot Be Empty";
 		}

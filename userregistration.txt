@@ -1,2 +1,2 @@
-Wakib|12345|1234||sifat@gmail.com|31121998|A-|Doctor
-Wakib|17-33699-1|123456||sifat6460@gmail.com|2020-03-03|O+|Doctor
+Wakib|17-33699-1|123456|sifat6460@gmail.com|2020-03-03|O+|Doctor
+QWerty|17-33725-1|123456789||qwert@gmail.com|2020-03-01|A-|Patient
