@@ -1,2 +1,1 @@
-Wakib|17-33699-1|123456|sifat6460@gmail.com|2020-03-03|O+|Doctor
-QWerty|17-33725-1|123456789||qwert@gmail.com|2020-03-01|A-|Patient
+Fariha|17-33779-1|852963|Female|fmajabin@gmail.com|2020-02-05|B+|Staff

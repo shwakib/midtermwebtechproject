@@ -25,6 +25,10 @@ if(isset($_REQUEST['submit']))
 				fclose($myfile);
 				header("location:home.php");
 			}
+			else
+			{
+				echo "Wrong Password";
+			}
 
 		}
 

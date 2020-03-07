@@ -17,7 +17,7 @@ if(isset($_REQUEST['submit']))
 			$name=$_REQUEST['rname'];
 			$id=$_REQUEST['rid'];
 			$password=$_REQUEST['rpassword'];
-			$gender=$_REQUEST['Gender'];
+			$gender=$_REQUEST['gender'];
 			$email=$_REQUEST['remail'];
 			$dob=$_REQUEST['rdate'];
 			$bg=$_REQUEST['rbloodgroup'];
