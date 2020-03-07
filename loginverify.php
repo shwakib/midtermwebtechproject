@@ -13,11 +13,12 @@ if(isset($_REQUEST['submit']))
 		$id=$_REQUEST['uid'];
 		$pass=$_REQUEST['upassword'];
 		$myfile=fopen('userregistration.txt', 'r');
-		while (!feof($myfile)) 
+		while(!feof($myfile)) 
 		{
 			$line=fgets($myfile);
 			$data=explode("|", $line);
-			if($id==trim($data[1]) && $pass==trim($data[2]))
+			print_r($data);
+			if($id==$data[1]&&$pass==$data[2])
 			{
 				$_SESSION['id']=$id;
 				$_SESSION['password']=$pass;
