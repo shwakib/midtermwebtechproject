@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration Page</title>
+	<title>Registration Dashboard</title>
 </head>
 <body>
 
 	<form method="POST" action="registrationuser.php">
 		<fieldset>
 			<legend>
-				Registration
+				Doctor Registration
 			</legend>
 				<table>
 					<tr>
@@ -76,17 +76,18 @@
 						<td>
 							<input type="radio" name="utype" value="Doctor">Doctor
 							<input type="radio" name="utype" value="Patient">Patient
-							<input type="radio" name="utype" value="Staff">Staff
+							
 						</td>
 					</tr>
 
 					<tr>
 						<td>
 										<input type="submit" name="submit" value="Create Account">	
-										<a href="login.php">Login</a>
+										
 						</td>
 						<td align="right">
-							<a href="homemain.php" align="right">Home</a>
+							<a href="home.php" align="right">Home</a>
+							<button><a href="staffregistration.php">Staff Registration</a></button>
 						</td>
 					</tr>				
 				</table> 
