@@ -9,14 +9,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration Page</title>
+	<title>Update Profile</title>
 </head>
 <body>
 
 	<form method="POST" action="registrationuser.php">
 		<fieldset>
 			<legend>
-				Registration
+				Update Profile
 			</legend>
 				<table>
 					<tr>
@@ -87,7 +87,7 @@
 
 					<tr>
 						<td>
-										<input type="submit" name="submit" value="Create Account">	
+										<input type="submit" name="submit" value="Update">	
 										
 						</td>
 						<td align="right">
