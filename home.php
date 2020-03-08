@@ -39,49 +39,49 @@
 
 		<tr>
 			<td colspan="2">
-				<a href="">Assign Doctor</a>
+				<a href="assigndoctor.php">Assign Doctor</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<a href="">Appointment History</a>
+				<a href="appointmenthistory.php">Appointment History</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<a href="">Assign Nurse</a>
+				<a href="assignnurse.php">Assign Nurse</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<a href="">Complaint History</a>
+				<a href="complainthistory.php">Complaint History</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<a href="">Create Duty Schedule</a>
+				<a href="dutyschedule.php">Create Duty Schedule</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<a href="">Search Patient</a>
+				<a href="searchpatient.php">Search Patient</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<a href="">Change Password</a>
+				<a href="changepassword.php">Change Password</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<a href="">Publish Job Vacancy</a>
+				<a href="publishjob.php">Publish Job Vacancy</a>
 			</td>
 		</tr>
 

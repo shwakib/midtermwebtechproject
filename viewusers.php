@@ -26,7 +26,7 @@
 			</tr>
 			<tr>
 				<td>16-10103-2</td>
-				<td>Kent</td>
+				<td><a href="doctorprofile.php">Dr. AGARKHEDKAR SHARAD RAMKRISHNA</a></td>
 				<td>Doctor</td>
 			</tr>
 			<tr>
