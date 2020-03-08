@@ -40,7 +40,7 @@
   		
   	</td>
   	<td align="right">
-  		<a href="">Logout</a>
+  		<a href="logout.php">Logout</a>
   	</td>
   </tr>
 

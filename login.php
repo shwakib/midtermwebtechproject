@@ -13,7 +13,7 @@
 
 				<center>
 							User ID: <br>
-							<input type="text" name="uid" value="01-885789"> <br>
+							<input type="text" name="uid" value=""> <br>
 							Password: <br>
 							<input type="password" name="upassword"> <br> <br>
 							<input type="submit" name="submit" value="Login">

@@ -6,8 +6,13 @@ if(isset($_REQUEST['submit']))
 		{
 		echo "Field Cannot Be Empty";
 		}
+
+	/*elseif (!preg_match("/^[a-zA-Z ]*$/",$_REQUEST['rname']) {
+		echo "Not allowed";
+	}*/
 	else
 	{
+
 		if($_REQUEST['rpassword']==$_REQUEST['rconfirmpassword'])
 		{
 			/*$data=$_REQUEST['date'];
@@ -15,6 +20,10 @@ if(isset($_REQUEST['submit']))
 			$data.=$_REQUEST['year'];*/
 
 			$name=$_REQUEST['rname'];
+			/*if (!preg_match("/^[a-zA-Z ]*$/",$name)) 
+			{
+      			$nameErr = "Only letters and white space allowed";
+    		}*/
 			$id=$_REQUEST['rid'];
 			$password=$_REQUEST['rpassword'];
 			$gender=$_REQUEST['gender'];
