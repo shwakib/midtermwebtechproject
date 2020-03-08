@@ -1,7 +1,11 @@
 <?php
- 	session_start();
-?>
+	session_start();
 
+	if(!isset($_SESSION['name']))
+	{
+		header("location:login.php");
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
