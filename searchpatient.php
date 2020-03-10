@@ -29,6 +29,30 @@
 			</tr>
 
 			<tr>
+				<td colspan="2">
+					Search Results:
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Patient ID
+				</td>
+				<td>
+					Patient Name
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					17-33789-1
+				</td>
+				<td>
+					<a href="viewusers.php">Nishat Tasnim Haque</a>
+				</td>
+			</tr>
+
+			<tr>
 				<td colspan="2" align="center">
 					<a href="home.php">Home</a>
 				</td>

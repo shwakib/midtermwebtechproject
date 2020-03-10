@@ -112,7 +112,7 @@
 		 			<a href="home.php">Home</a>
 		 		</td>
 		 		<td colspan="2" align="right">
-		 			<a href="">Submit Action</a>
+		 			<a href="submitaction.php">Submit Action</a>
 		 		</td>
 		 	</tr>
 

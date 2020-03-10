@@ -69,7 +69,7 @@
 	 </tr>
 	 
 	 <td colspan="2" align="left"><u><a href="home.php">Go Home</a></u>
-	 	<td colspan="1" align="right"><u><a href="">Assign</a></u></td>
+	 	<td colspan="1" align="right"><u><a href="home.php">Assign</a></u></td>
 	 </td>
 	 </tr>
 	 

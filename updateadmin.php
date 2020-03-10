@@ -87,7 +87,7 @@
 
 					<tr>
 						<td>
-										<input type="submit" name="submit" value="Update">	
+										<button><a href="home.php">Update</a></button>	
 										
 						</td>
 						<td align="right">

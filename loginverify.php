@@ -7,6 +7,7 @@ if(isset($_REQUEST['submit']))
 	if(empty($_REQUEST['uid'])||empty($_REQUEST['upassword']))
 	{
 		echo "Field cannot be empty";
+		header("location:login.php");
 	}
 	else
 	{
@@ -17,7 +18,7 @@ if(isset($_REQUEST['submit']))
 		{
 			$line=fgets($myfile);
 			$data=explode("|", $line);
-			print_r($data);
+			//print_r($data);
 			if($id==$data[1]&&$pass==$data[2])
 			{
 				$_SESSION['id']=$id;
