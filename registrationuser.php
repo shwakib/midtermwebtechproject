@@ -2,7 +2,7 @@
 
 if(isset($_REQUEST['submit']))
 {
-	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail'])||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['stafftype']))
+	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail'])||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['utype']))
 		{
 		echo "Field Cannot Be Empty";
 		}
@@ -30,11 +30,22 @@ if(isset($_REQUEST['submit']))
 			$email=$_REQUEST['remail'];
 			$dob=$_REQUEST['rdate'];
 			$bg=$_REQUEST['rbloodgroup'];
-			$type=$_REQUEST['stafftype'];
+			$type=$_REQUEST['utype'];
 			$myfile=fopen('userregistration.txt','a');
 			fwrite($myfile,"$name|$id|$password|$gender|$email|$dob|$bg|$type\r\n");
 			fclose($myfile);
 			header("location:home.php");
+			$con=mysqli_connect('127.0.0.1','root','','webtech');
+
+			$sql = "insert into registeredusers values('{$name}','{$id}','{$password}','{$gender}','{$email}','{$dob}','{$bg}','{$type}')";
+			if(mysqli_query($con, $sql))
+			{
+			echo "Registration done!";
+			}
+			else
+			{
+			echo "Error";
+			}
 		}
 		else
 		{

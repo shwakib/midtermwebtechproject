@@ -3,3 +3,5 @@ Wakib|17-33699-1|12345|Male|sifat6460@gmail.com|2020-03-05|O+|Doctor
 Wakib|17-33699-1|12345|Male|sifat6460@gmail.com|2020-03-03|O+|Doctor
 Wakib2|17-33699-12|12345|Male|sifat6460@gmail.com|2020-03-02|O+|Patient
 Maruf|17-33768-1|12345|Male|sifat6460@gmail.com|2020-03-02|O-|Reciptionist
+Wakib|17336991|123456|Female|sifat6460@gmail.com|2020-03-03|O+|
+Wakib|17336991|1234567|Male|sifat6460@gmail.com|2020-03-03|O+|Staff
