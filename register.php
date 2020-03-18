@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<form method="POST" action="registrationuser.php">
+	<form method="POST" action="registrationuser.php" enctype="multipart/form-data">
 		<fieldset>
 			<legend>
 				Registration
@@ -68,6 +68,15 @@
 							</select>
 						</td>
 					</tr>	
+					
+					<tr>
+						<td>
+							Image: 
+						</td>
+						<td>
+							<input type="file" name="userpic">
+						</td>
+					</tr>
 
 					<tr>
 						<td>
@@ -79,6 +88,7 @@
 							<input type="radio" name="utype" value="Staff">Staff
 						</td>
 					</tr>
+					
 
 					<tr>
 						<td>

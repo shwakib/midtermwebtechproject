@@ -5,3 +5,5 @@ Wakib2|17-33699-12|12345|Male|sifat6460@gmail.com|2020-03-02|O+|Patient
 Maruf|17-33768-1|12345|Male|sifat6460@gmail.com|2020-03-02|O-|Reciptionist
 Wakib|17336991|123456|Female|sifat6460@gmail.com|2020-03-03|O+|
 Wakib|17336991|1234567|Male|sifat6460@gmail.com|2020-03-03|O+|Staff
+Hello|123456|654321|Male|hek@jhadcb.com|2020-03-02|B+|Doctor
+Reya|789456|123456|Female|asbcjha@hascb.com|2020-03-01|O-|Reya|Staff

@@ -2,7 +2,7 @@
 
 if(isset($_REQUEST['submit']))
 {
-	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail'])||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['utype']))
+	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail'])||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup']) ||empty($_REQUEST['utype']))
 		{
 		echo "Field Cannot Be Empty";
 		}
@@ -30,11 +30,28 @@ if(isset($_REQUEST['submit']))
 			$email=$_REQUEST['remail'];
 			$dob=$_REQUEST['rdate'];
 			$bg=$_REQUEST['rbloodgroup'];
+
+			$filename=$_FILES['userpic']['name'];
+			$dest="upload/"."$name.jpg";
+			$picname=$name;
+			$src = $_FILES['userpic']['tmp_name'];
+			if(move_uploaded_file($src, $dest))
+			{
+			$_SESSION['pic'] = $filename;
+			//header('location: home.php');
+			}
+			else
+			{
+			echo "Error";
+			}
+
 			$type=$_REQUEST['utype'];
 			$myfile=fopen('userregistration.txt','a');
-			fwrite($myfile,"$name|$id|$password|$gender|$email|$dob|$bg|$type\r\n");
+			fwrite($myfile,"$name|$id|$password|$gender|$email|$dob|$bg|$picname|$type\r\n");
 			fclose($myfile);
+
 			header("location:home.php");
+
 			$con=mysqli_connect('127.0.0.1','root','','webtech');
 
 			$sql = "insert into registeredusers values('{$name}','{$id}','{$password}','{$gender}','{$email}','{$dob}','{$bg}','{$type}')";
