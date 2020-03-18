@@ -30,7 +30,7 @@
   </td>
   
   <td>
-<img src="dr1.jpg" width="100px" height="100px"/>  
+<img src="upload/<?=$_SESSION['name'].".jpg"?>" width="100px" height="100px"/>  
   </td>
   </tr>
 

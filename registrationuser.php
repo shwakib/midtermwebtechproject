@@ -32,7 +32,7 @@ if(isset($_REQUEST['submit']))
 			$bg=$_REQUEST['rbloodgroup'];
 
 			$filename=$_FILES['userpic']['name'];
-			$dest="upload/"."$name.jpg";
+			$dest="upload/"."$name".".jpg";
 			$picname=$name;
 			$src = $_FILES['userpic']['tmp_name'];
 			if(move_uploaded_file($src, $dest))
