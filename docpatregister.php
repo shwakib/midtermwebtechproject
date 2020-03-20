@@ -13,10 +13,10 @@
 </head>
 <body>
 
-	<form method="POST" action="registrationuser.php">
+	<form method="POST" action="patientregistration.php">
 		<fieldset>
 			<legend>
-				Doctor Registration
+				Patient Registration
 			</legend>
 				<table>
 					<tr>
@@ -79,11 +79,11 @@
 
 					<tr>
 						<td>
-							User Type
+							
 						</td>
 						<td>
-							<input type="radio" name="utype" value="Doctor">Doctor
-							<input type="radio" name="utype" value="Patient">Patient
+							
+							
 							
 						</td>
 					</tr>
@@ -96,6 +96,7 @@
 						<td align="right">
 							<a href="home.php" align="right">Home</a>
 							<button><a href="staffregistration.php">Staff Registration</a></button>
+							<button><a href="docregistration.php">Doctor Registration</a></button>
 						</td>
 					</tr>				
 				</table> 

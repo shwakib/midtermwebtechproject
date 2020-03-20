@@ -79,14 +79,10 @@
 					</tr>
 
 					<tr>
-						<td>
-							User Type
+						<td colspan="2">
+							
 						</td>
-						<td>
-							<input type="radio" name="utype" value="Doctor">Doctor
-							<input type="radio" name="utype" value="Patient">Patient
-							<input type="radio" name="utype" value="Staff">Staff
-						</td>
+						
 					</tr>
 					
 

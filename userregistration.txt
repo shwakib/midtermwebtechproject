@@ -11,3 +11,8 @@ Esha|123456|123456|Female|sdcghv@jhdv.com|2020-03-08|O-|Esha|Patient
 Esha|123456|123456|Female|sdcghv@jhdv.com|2020-03-08|O-|Esha|Patient
 Dhia|789456|789456|Female|ascas@vasj.com|2020-03-02|B-|Dhia|Patient
 Lamia|741852|123456|Female|kjcbkjsc@hgcvsh.com|2020-03-01|A+|Lamia|Doctor
+Wakib|17-33699-1|123456|Male|sifat64620@gmail.com|2020-03-01|O+|Wakib|Doctor
+Wakib|17-33699-1|123456|Male|sifat64620@gmail.com|2020-03-01|O+|Wakib|Patient
+Wakib|17-33699-1|789456|Male|sifat64620@gmail.com|2020-03-01|O+|Wakib|Patient
+Reya|789456|123456|Female|sifat6460@gmail.com|2020-03-01|O+|Reya|admin
+Eshuni|17-33779-1|123456|Female|nusrat@gmail.com|2020-03-01|B-|Eshuni|patient
