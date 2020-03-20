@@ -13,10 +13,10 @@
 </head>
 <body>
 
-	<form method="POST" action="patientregistration.php" enctype="multipart/form-data">
+	<form method="POST" action="docregister.php" enctype="multipart/form-data">
 		<fieldset>
 			<legend>
-				Patient Registration
+				Doctor Registration
 			</legend>
 				<table>
 					<tr>
@@ -75,28 +75,28 @@
 								<option value="O-">O-</option>
 							</select>
 						</td>
+					</tr>
+					<tr>
+						<td>
+							Upload Picture
+						</td>
+						<td>
+							<input type="file" name="docpic">
+						</td>
 					</tr>	
 
 					<tr>
 						<td>
-							Upload Image
+							Staff Type
 						</td>
 						<td>
-							
-							<input type="file" name="patientpic">
-							
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							Patient Type
-						</td>
-						<td>
-							<select name="patienttype">
-								<option value="Normal">Normal</option>
-								<option value="VIP">VIP</option>
+							<select name="docspecialization">
+								<option value="Pediatrician">Pediatrician</option>
+								<option value="Obstetrician">Obstetrician</option>
+								<option value="Surgeon">Surgeon</option>
+								<option value="Cardiologist">Cardiologist</option>
 							</select>
+							
 						</td>
 					</tr>
 
@@ -107,8 +107,7 @@
 						</td>
 						<td align="right">
 							<a href="home.php" align="right">Home</a>
-							<button><a href="staffregistration.php">Staff Registration</a></button>
-							<button><a href="docregistration.php">Doctor Registration</a></button>
+							
 						</td>
 					</tr>				
 				</table> 

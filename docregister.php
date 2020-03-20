@@ -2,7 +2,7 @@
 
 if(isset($_REQUEST['submit']))
 {
-	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail'])||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup'])||empty($_REQUEST['patienttype']))
+	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail'])||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup'])||empty($_REQUEST['docspecialization']))
 		{
 		echo "Field Cannot Be Empty";
 		}
@@ -31,10 +31,10 @@ if(isset($_REQUEST['submit']))
 			$dob=$_REQUEST['rdate'];
 			$bg=$_REQUEST['rbloodgroup'];
 
-			$filename=$_FILES['patientpic']['name'];
+			$filename=$_FILES['docpic']['name'];
 			$dest="upload/"."$name".".jpg";
 			$picname=$name;
-			$src = $_FILES['patientpic']['tmp_name'];
+			$src = $_FILES['docpic']['tmp_name'];
 			if(move_uploaded_file($src, $dest))
 			{
 			$_SESSION['pic'] = $filename;
@@ -45,8 +45,8 @@ if(isset($_REQUEST['submit']))
 			echo "Error";
 			}
 
-			$type='patient';
-			$patienttype=$_REQUEST['patienttype'];
+			$type='doctor';
+			$doctype=$_REQUEST['docspecialization'];
 			$myfile=fopen('userregistration.txt','a');
 			fwrite($myfile,"$name|$id|$password|$gender|$email|$dob|$bg|$picname|$type\r\n");
 			fclose($myfile);
@@ -55,7 +55,7 @@ if(isset($_REQUEST['submit']))
 
 			$con=mysqli_connect('127.0.0.1','root','','webtech');
 
-			$sql = "insert into user values('{$name}','{$id}','{$password}','{$gender}','{$email}','{$dob}','{$bg}','{$picname}','{$type}','{$patienttype}')";
+			$sql = "insert into user values('{$name}','{$id}','{$password}','{$gender}','{$email}','{$dob}','{$bg}','{$picname}','{$type}','{$doctype}')";
 			if(mysqli_query($con, $sql))
 			{
 			echo "Registration done!";

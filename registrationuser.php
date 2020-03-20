@@ -51,10 +51,11 @@ if(isset($_REQUEST['submit']))
 			fclose($myfile);
 
 			header("location:home.php");
+			$admintype='operations';
 
 			$con=mysqli_connect('127.0.0.1','root','','webtech');
 
-			$sql = "insert into user values('{$name}','{$id}','{$password}','{$gender}','{$email}','{$dob}','{$bg}','{$picname}','{$type}')";
+			$sql = "insert into user values('{$name}','{$id}','{$password}','{$gender}','{$email}','{$dob}','{$bg}','{$picname}','{$type}','{$admintype}')";
 			if(mysqli_query($con, $sql))
 			{
 			echo "Registration done!";

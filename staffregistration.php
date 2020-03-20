@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<form method="POST" action="registrationuser.php">
+	<form method="POST" action="staffregister.php" enctype="multipart/form-data">
 		<fieldset>
 			<legend>
 				Staff Registration
@@ -74,6 +74,14 @@
 								<option value="O+">O+</option>
 								<option value="O-">O-</option>
 							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Upload Picture
+						</td>
+						<td>
+							<input type="file" name="staffpic">
 						</td>
 					</tr>	
 
