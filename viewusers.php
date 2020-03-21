@@ -48,9 +48,7 @@
 			
 		</table> -->
 
-			<a href="home.php"> Back</a> | 
-		<a href="logout.php"> logout</a> 
-		<br>
+			
 
 
 
@@ -72,6 +70,7 @@
 				<td>Image</td>
 				<td>Usertype</td>
 				<td>Action</td>
+				
 
 			</tr>
 
@@ -81,20 +80,28 @@
 				?>
 
 				<tr>
-					<td><?=$row['name']?></td>
+					<td><a href=""><?=$row['name']?></a></td>
 					<td><?=$row['id']?></td>
 					<td><?=$row['gender']?></td>
 					<td><?=$row['email']?></td>
 					<td><?=$row['dob']?></td>
 					<td><?=$row['bg']?></td>
-					<td><img src="upload/<?=$row['name'].".jpg"?>"></td>
+					<td><img src="upload/<?=$row['name'].".jpg"?>" width="80px" height="80px"></td>
 					<td><?=$row['usertype']?></td>
 					<td>
 						<a href="">Edit</a>|
 						<a href="">Delete</a>
 					</td>
+					
 				</tr>
 		<?php	} ?>
+
+			<tr>
+					<td colspan="9" align="right">
+						<a href="home.php"> Back</a> | 
+						<a href="logout.php"> Logout</a> 
+					</td>
+			</tr>
 
 		</table>
 	
