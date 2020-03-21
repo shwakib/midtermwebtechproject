@@ -13,7 +13,7 @@
 </head>
 <body>
 	
-		<table border="1px" align="center" border-spacing='5px's>
+		<!-- <table border="1px" align="center" border-spacing='5px's>
 			<tr>
 				<td colspan="3" align="center">Users
 			</tr>
@@ -46,6 +46,56 @@
 				<td colspan="3" align="right"><u><a href="home.php">Go Home</a></u></td>
 			</tr>
 			
+		</table> -->
+
+			<a href="home.php"> Back</a> | 
+		<a href="logout.php"> logout</a> 
+		<br>
+
+
+
+		<?php
+			$con =mysqli_connect('127.0.0.1','root','','webtech');
+			$sql = "select * from user";
+			$result = mysqli_query($con, $sql);
+
+		?>
+
+		<table border="1">
+			<tr>
+				<td>Name</td>
+				<td>ID</td>
+				<td>Gender</td>
+				<td>E-mail</td>
+				<td>Date Of Birth</td>
+				<td>Blood Group</td>
+				<td>Image</td>
+				<td>Usertype</td>
+				<td>Action</td>
+
+			</tr>
+
+		<?php
+			while($row=mysqli_fetch_assoc($result))
+			{
+				?>
+
+				<tr>
+					<td><?=$row['name']?></td>
+					<td><?=$row['id']?></td>
+					<td><?=$row['gender']?></td>
+					<td><?=$row['email']?></td>
+					<td><?=$row['dob']?></td>
+					<td><?=$row['bg']?></td>
+					<td><img src="upload/<?=$row['name'].".jpg"?>"></td>
+					<td><?=$row['usertype']?></td>
+					<td>
+						<a href="">Edit</a>|
+						<a href="">Delete</a>
+					</td>
+				</tr>
+		<?php	} ?>
+
 		</table>
 	
 </body>

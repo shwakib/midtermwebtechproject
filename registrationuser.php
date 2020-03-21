@@ -46,11 +46,10 @@ if(isset($_REQUEST['submit']))
 			}
 
 			$type='admin';
-			$myfile=fopen('userregistration.txt','a');
+			/*$myfile=fopen('userregistration.txt','a');
 			fwrite($myfile,"$name|$id|$password|$gender|$email|$dob|$bg|$picname|$type\r\n");
-			fclose($myfile);
+			fclose($myfile);*/
 
-			header("location:home.php");
 			$admintype='operations';
 
 			$con=mysqli_connect('127.0.0.1','root','','webtech');
@@ -59,6 +58,8 @@ if(isset($_REQUEST['submit']))
 			if(mysqli_query($con, $sql))
 			{
 			echo "Registration done!";
+			header("location:home.php");
+
 			}
 			else
 			{
