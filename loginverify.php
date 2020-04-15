@@ -1,6 +1,9 @@
+
+
+
 <?php
 
-session_start();
+/*session_start();
 
 if(isset($_REQUEST['submit']))
 {
@@ -13,7 +16,7 @@ if(isset($_REQUEST['submit']))
 	{
 		$id=$_REQUEST['uid'];
 		$pass=$_REQUEST['upassword'];
-		/*$myfile=fopen('userregistration.txt', 'r');
+		$myfile=fopen('userregistration.txt', 'r');
 		while(!feof($myfile)) 
 		{
 			$line=fgets($myfile);
@@ -32,7 +35,7 @@ if(isset($_REQUEST['submit']))
 				echo "Wrong Password";
 			}
 
-		}*/
+		}
 		$con =mysqli_connect('127.0.0.1','root','','webtech');
 		$sql = "select * from user where id='{$id}' and password='{$pass}'";
 		$result = mysqli_query($con, $sql);
@@ -53,6 +56,42 @@ if(isset($_REQUEST['submit']))
 else
 {
 	header("location:login.php");
+}*/
+
+
+session_start();
+if(isset($_POST['uid']))
+
+{
+	$id=$_POST['uid'];
+	$pass=$_POST['pass'];
+
+	if(empty($id)||empty($pass))
+	{
+		echo "null";
+	}
+	else
+	{
+		$con =mysqli_connect('127.0.0.1','root','','webtech');
+		$sql = "select * from user where id='{$id}' and password='{$pass}'";
+		$result = mysqli_query($con, $sql);
+		$user = mysqli_fetch_assoc($result);
+
+		if(count($user) > 0 )
+		{
+			echo $user['usertype'];
+			$_SESSION['id']= $id;
+			$_SESSION['pass']= $pass;
+			$_SESSION['type']= $data['usertype'];
+		}
+		else
+		{
+			echo "false";
+		}
+	}
+
 }
 
 ?>
+
+

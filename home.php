@@ -15,6 +15,8 @@
 </head>
 <body>
 
+Welcome <?= $_SESSION['name']?>
+
 	
 	
 	<table border="1" align="center" width="100">
