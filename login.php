@@ -19,12 +19,14 @@
 			else
 			{
 				var xhttp = new XMLHttpRequest();
-				xhttp.open("POST","loginverify.php", true);
-				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				xhttp.open("POST","loginverify.php",true);
+				xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 				xhttp.send('uid='+id+'&pass='+pass);
 
 				xhttp.onreadystatechange = function()
 				{
+					//alert(this.responseText);
+
 					if (this.readyState == 4 && this.status == 200)
 					{
 						if (this.responseText=="admin")
@@ -44,7 +46,9 @@
 							document.getElementById("loginmsg").innerHTML="Invalid user ID or Password";
 							alert(this.responseText);
 						}
-					}
+						
+					};
+
 				}
 			}
 		}

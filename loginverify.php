@@ -82,7 +82,8 @@ if(isset($_POST['uid']))
 			echo $user['usertype'];
 			$_SESSION['id']= $id;
 			$_SESSION['pass']= $pass;
-			$_SESSION['type']= $data['usertype'];
+			$_SESSION['type']= $user['usertype'];
+			$_SESSION['name']= $user['name'];
 		}
 		else
 		{
