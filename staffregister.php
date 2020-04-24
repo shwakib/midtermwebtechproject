@@ -2,7 +2,7 @@
 
 if(isset($_REQUEST['submit']))
 {
-	if(empty($_REQUEST['rname']) || empty($_REQUEST['rid']) || empty($_REQUEST['rpassword']) || empty($_REQUEST['rconfirmpassword']) || empty($_REQUEST['gender']) || empty($_REQUEST['remail'])||empty($_REQUEST['rdate'])|| empty($_REQUEST['rbloodgroup'])||empty($_REQUEST['stafftype']))
+	if(empty($_REQUEST['rid']) || empty($_REQUEST['rname']) || empty($_REQUEST['gender']) || empty($_REQUEST['rdate']) || empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['marstatus'])||empty($_REQUEST['remail'])|| empty($_REQUEST['rnumber'])||empty($_REQUEST['raddress'])||empty($_REQUEST['remname'])||empty($_REQUEST['remnumber'])||empty($_REQUEST['rrelastionship'])||empty($_REQUEST['rpassword'])||empty($_REQUEST['rconfirmpassword'])||empty($_REQUEST['stafftype']))
 		{
 		echo "Field Cannot Be Empty";
 		}
@@ -19,22 +19,32 @@ if(isset($_REQUEST['submit']))
 			$data.=$_REQUEST['month'];
 			$data.=$_REQUEST['year'];*/
 
+			$id=$_REQUEST['rid'];
 			$name=$_REQUEST['rname'];
+			$gender=$_REQUEST['gender'];
+			$dob=$_REQUEST['rdate'];
 			/*if (!preg_match("/^[a-zA-Z ]*$/",$name)) 
 			{
       			$nameErr = "Only letters and white space allowed";
     		}*/
-			$id=$_REQUEST['rid'];
-			$password=$_REQUEST['rpassword'];
-			$gender=$_REQUEST['gender'];
-			$email=$_REQUEST['remail'];
-			$dob=$_REQUEST['rdate'];
 			$bg=$_REQUEST['rbloodgroup'];
+			$marstatus=$_REQUEST['marstatus'];
+			$email=$_REQUEST['remail'];
+			$phnumber=$_REQUEST['rnumber'];
+			$address=$_REQUEST['raddress'];
+			$ecp=$_REQUEST['remname'];
+			$ecn=$_REQUEST['remnumber'];
+			$relation=$_REQUEST['rrelastionship'];
+			$password=$_REQUEST['rconfirmpassword'];
+			
+			
+			
+			
 
-			$filename=$_FILES['staffpic']['name'];
+			$filename=$_FILES['userpic']['name'];
 			$dest="upload/"."$name".".jpg";
 			$picname=$name;
-			$src = $_FILES['staffpic']['tmp_name'];
+			$src = $_FILES['userpic']['tmp_name'];
 			if(move_uploaded_file($src, $dest))
 			{
 			$_SESSION['pic'] = $filename;
@@ -45,21 +55,21 @@ if(isset($_REQUEST['submit']))
 			echo "Error";
 			}
 
-			$type='Staff';
-			$stafftype=$_REQUEST['stafftype'];
-			$myfile=fopen('userregistration.txt','a');
+			$type='staff';
+			/*$myfile=fopen('userregistration.txt','a');
 			fwrite($myfile,"$name|$id|$password|$gender|$email|$dob|$bg|$picname|$type\r\n");
-			fclose($myfile);
+			fclose($myfile);*/
 
-			//header("location:home.php");
+			$stafftype=$_REQUEST['stafftype'];
 
 			$con=mysqli_connect('127.0.0.1','root','','webtech');
 
-			$sql = "insert into user values('{$name}','{$id}','{$password}','{$gender}','{$email}','{$dob}','{$bg}','{$picname}','{$type}','{$stafftype}')";
+			$sql = "insert into user values('{$id}','{$name}','{$gender}','{$dob}','{$bg}','{$marstatus}','{$email}','{$phnumber}','{$address}','{$ecp}','{$ecn}','{$relation}','{$password}','{$picname}','{$type}','{$stafftype}')";
 			if(mysqli_query($con, $sql))
 			{
 			echo "Registration done!";
 			header("location:home.php");
+
 			}
 			else
 			{
@@ -74,7 +84,7 @@ if(isset($_REQUEST['submit']))
 }
 else
 {
-	header("location:register.php");
+	header("location:staffregistration.php");
 }
 
 ?>

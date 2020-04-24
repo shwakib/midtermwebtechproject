@@ -86,10 +86,11 @@ if(isset($_POST['uid']))
 
 		if(count($user)>0)
 		{
-			echo trim($user['usertype']);
+			//sleep(5);
+			echo trim($user['type']);
 			$_SESSION['id']= $id;
 			$_SESSION['pass']= $pass;
-			$_SESSION['type']= $user['usertype'];
+			$_SESSION['type']= $user['type'];
 			$_SESSION['name']= $user['name'];
 		}
 		else

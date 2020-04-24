@@ -20,27 +20,21 @@
 			</legend>
 				<table>
 					<tr>
-						<td>Name</td>
-						<td><input type="text" name="rname"></td>
-					</tr>
-
-					<tr>
-						<td>ID</td>
+						<td>ID:</td>
 						<td><input type="text" name="rid"></td>
 					</tr>
 
 					<tr>
-						<td>Password</td>
-						<td><input type="password" name="rpassword"></td>
+						<td>Name:</td>
+						<td><input type="text" name="rname"></td>
 					</tr>
 
-					<tr>
-						<td>Confirm Password</td>
-						<td><input type="password" name="rconfirmpassword"></td>
-					</tr>
+					
+
+					
 
 					<tr>
-						<td>Gender</td>
+						<td>Gender:</td>
 						<td>
 							<input type="radio" name="gender" value="Male">Male
 							<input type="radio" name="gender" value="Female">Female
@@ -49,12 +43,7 @@
 					</tr>
 
 					<tr>
-						<td>Email</td>
-						<td><input type="Email" name="remail"></td>
-					</tr>
-
-					<tr>
-						<td>Date Of Birth</td>
+						<td>Date Of Birth:</td>
 						<td>
 							<input type="Date" name="rdate">
 							<!-- <input type="text" size="2" name="date">/
@@ -64,7 +53,7 @@
 					</tr>
 
 					<tr>
-						<td>Blood Group</td>
+						<td>Blood Group:</td>
 						<td>
 							<select name="rbloodgroup">
 								<option value="A+">A+</option>
@@ -78,13 +67,85 @@
 					</tr>	
 
 					<tr>
+						<td>Maritual Status:</td>
 						<td>
-							Upload Image
+							<input type="radio" name="marstatus" value="Single">Single
+							<input type="radio" name="marstatus" value="Married">Married
+							
+						</td>
+					</tr>
+
+					<tr>
+						<td>Email:</td>
+						<td><input type="Email" name="remail"></td>
+					</tr>
+
+					<tr>
+						<td>
+							Contact Number:
+						</td>
+
+						<td>
+							<input type="number" name="rnumber">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Address:
+						</td>
+
+						<td>
+							<textarea name="raddress">
+								
+							</textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Emergency Contact Person:
+						</td>
+
+						<td>
+							<input type="text" name="remname">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Emergency Contact Number:
+						</td>
+
+						<td>
+							<input type="tel" id="phone" name="remnumber" pattern="[0-9]{5}-[0-9]{6}" maxlength="12">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Relationship with Patient:
 						</td>
 						<td>
-							
-							<input type="file" name="patientpic">
-							
+							<input type="text" name="rrelastionship">
+						</td>
+					</tr>
+
+					<tr>
+						<td>Password:</td>
+						<td><input type="password" name="rpassword"></td>
+					</tr>
+
+					<tr>
+						<td>Confirm Password:</td>
+						<td><input type="password" name="rconfirmpassword"></td>
+					</tr>
+					<tr>
+						<td>
+							Image: 
+						</td>
+						<td>
+							<input type="file" name="userpic">
 						</td>
 					</tr>
 

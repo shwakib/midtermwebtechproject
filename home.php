@@ -1,9 +1,12 @@
 <?php
 	session_start();
 
-	if(!isset($_SESSION['name']))
+	//echo $_SESSION['type'];
+
+	if(!($_SESSION['type']=='admin'))
 	{
 		header("location:login.php");
+		session_destroy();
 	}
 ?>
 
