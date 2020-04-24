@@ -1,6 +1,13 @@
 
 
 
+
+
+
+
+
+
+
 <?php
 
 /*session_start();
@@ -77,9 +84,9 @@ if(isset($_POST['uid']))
 		$result = mysqli_query($con, $sql);
 		$user = mysqli_fetch_assoc($result);
 
-		if(count($user) > 0 )
+		if(count($user)>0)
 		{
-			echo $user['usertype'];
+			echo trim($user['usertype']);
 			$_SESSION['id']= $id;
 			$_SESSION['pass']= $pass;
 			$_SESSION['type']= $user['usertype'];

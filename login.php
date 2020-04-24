@@ -25,30 +25,37 @@
 
 				xhttp.onreadystatechange = function()
 				{
-					//alert(this.responseText);
-
 					if (this.readyState == 4 && this.status == 200)
 					{
-						if (this.responseText=="admin")
+					
+						alert(this.responseText);
+
+					
+					
+						if(this.responseText.match('admin'))	
 						{
-							window.location.href="home.php";
+							window.location.href='home.php';
 						}
-						else if(this.responseText=="doctor")
+						else if(this.responseText.match('doctor'))
 						{
-							window.location.href="dochome.php";
+							window.location.href='dochome.php';
 						}
-						else if(this.responseText=="staff")
+						else if(this.responseText.match('patient'))
 						{
-							window.location.href="staffhome.php";
+							window.location.href='pathome.php';
 						}
+						else if(this.responseText.match('staff'))
+						{
+							window.location.href='staffhome.php';
+						}
+										
 						else
 						{
-							document.getElementById("loginmsg").innerHTML="Invalid user ID or Password";
+							document.getElementById('loginmsg').innerHTML = "Invalid ID and password"
 							alert(this.responseText);
+											
 						}
-						
 					};
-
 				}
 			}
 		}
@@ -64,7 +71,7 @@
 							<br>
 							<input type="text" name="uid" id="uid" value="" placeholder="Enter your user ID"> <br>
 							 <br>
-							<input type="password" id="upassword" name="upassword" value="" placeholder="Enter your Password">
+							<input type="password" id="upassword" value="" placeholder="Enter your Password">
 							<p id="loginmsg"></p>
 							<input type="button" name="submit" value="Login" onclick="f1()">
 							<u><a href="register.php">Register</a></u>
