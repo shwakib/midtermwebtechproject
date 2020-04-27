@@ -5,6 +5,53 @@
 </head>
 <body>
 
+
+
+	<script type="text/javascript">
+		
+		function f1()
+		{
+			var id=document.getElementById('rid').value;
+			var name=document.getElementById('rname').value;
+			var gender=document.getElementsByName('gender'); 
+            
+            for(i=0;i<gender.length;i++)
+            { 
+                if(gender[i].checked)
+                {
+                	var gendervalue=gender[i].value;
+                } 
+            } 
+          	//alert(gendervalue);
+
+          	var date=document.getElementById('rdate').value;
+          	//alert(date);
+          	var bloodgroup=document.getElementById('rbloodgroup').value;
+          	//alert(bloodgroup);
+          	var married=document.getElementsByName('marstatus');
+          	for(i=0;i<married.length;i++)
+            { 
+                if(married[i].checked)
+                {
+                	var marstatusvalue=married[i].value;
+                } 
+            }
+
+            //alert(marstatusvalue);
+            var email=document.getElementById('remail').value;
+            var contact=document.getElementById('rnumber').value;
+            var address=document.getElementById('raddress').value;
+            var ecp=document.getElementById('remname').value;
+            var ecn=document.getElementById('remnumber').value;
+            var relation=document.getElementById('rrelastionship').value;
+            var pass=document.getElementById('rpassword').value;
+            var cpass=document.getElementById('rconfirmpassword').value;
+            var image=document.getElementByName('userpic').value;
+
+            alert(image);
+		}
+	</script>
+
 	<form method="POST" action="registrationuser.php" enctype="multipart/form-data">
 		<fieldset>
 			<legend>
@@ -71,7 +118,10 @@
 
 					<tr>
 						<td>Email:</td>
-						<td><input type="Email" id="remail" name="remail"></td>
+						<td>
+							<input type="Email" id="remail" name="remail">
+							<abbr title="sample@example.com"><b>i</b></abbr>
+						</td>
 					</tr>
 
 					<tr>
@@ -154,7 +204,7 @@
 
 					<tr>
 						<td>
-										<input type="submit" name="submit" value="Create Account">	
+										<input type="submit" name="submit" value="Create Account" onclick="f1()">	
 										<a href="login.php">Login</a>
 						</td>
 						<td align="right">

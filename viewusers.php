@@ -61,14 +61,19 @@
 
 		<table border="1">
 			<tr>
-				<td>Name</td>
 				<td>ID</td>
+				<td>Name</td>
 				<td>Gender</td>
-				<td>E-mail</td>
 				<td>Date Of Birth</td>
 				<td>Blood Group</td>
+				<td>E-mail</td>
+				<td>Contact Number</td>
+				<td>Address</td>
+				<td>Emergency Contact Person</td>
+				<td>Emergency Contact Number</td>
+				<td>Relation With</td>
 				<td>Image</td>
-				<td>Usertype</td>
+				<td>Type</td>
 				<td>Action</td>
 				
 
@@ -80,14 +85,20 @@
 				?>
 
 				<tr>
-					<td><a href=""><?=$row['name']?></a></td>
 					<td><?=$row['id']?></td>
+					<td><a href=""><?=$row['name']?></a></td>
 					<td><?=$row['gender']?></td>
-					<td><?=$row['email']?></td>
 					<td><?=$row['dob']?></td>
 					<td><?=$row['bg']?></td>
+					<td><?=$row['email']?></td>
+					<td><?=$row['contactnum']?></td>
+					<td><?=$row['address']?></td>
+					<td><?=$row['ecp']?></td>
+					<td><?=$row['ecn']?></td>
+					<td><?=$row['relwadmin']?></td>
+
 					<td><img src="upload/<?=$row['name'].".jpg"?>" width="80px" height="80px"></td>
-					<td><?=$row['usertype']?></td>
+					<td><?=$row['type']?></td>
 					<td>
 						<a href="">Edit</a>|
 						<a href="">Delete</a>
@@ -97,7 +108,7 @@
 		<?php	} ?>
 
 			<tr>
-					<td colspan="9" align="right">
+					<td colspan="14" align="right">
 						<a href="home.php"> Back</a> | 
 						<a href="logout.php"> Logout</a> 
 					</td>

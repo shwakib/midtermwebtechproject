@@ -18,11 +18,11 @@
 			<fieldset>
 				<legend>CHANGE PASSWORD</legend>
 				Current Password<br>
-				<input type="password" name="upassword"><br>
+				<input type="password" name="upassword" minlength="8"><br>
 				New Password<br>
-				<input type="password" name="cupassowrd"><br>
+				<input type="password" name="cupassowrd" minlength="8"><br>
 				Re-type New Password<br>
-				<input type="password" name="cupassowrd"><br>
+				<input type="password" name="cupassowrd" minlength="8" pattern="[a-z][0-9][/*][A-Z]"><br>
 			</fieldset>
 		</form>
 		<br>
