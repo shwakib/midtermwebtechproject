@@ -18,7 +18,7 @@
 </head>
 <body>
 
-Welcome <?= $_SESSION['name']?>
+
 
 	
 	

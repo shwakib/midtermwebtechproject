@@ -5,6 +5,9 @@
 	{
 		header("location:login.php");
 	}
+
+  $id=$_SESSION['id'];
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,34 +18,81 @@
 	<form>
 	<fieldset>
 	
-	 <table border="1" width="100%">
+	 <table  width="100%">
   
   <tr>
-  <td width="85%">
-   <h1> <?= $_SESSION['name']?></h1>
-   <p> <i> 55,Kamal Ataturk avenue,</i> <br> <i>Banani, Dhaka.</i> <br>
-   	<b> Gender:</b> Male<br>
-   	<b> Date of Birth:</b>28/09/1998<br>
-   	<b> Blood group:</b>A(+ve)<br><br>
-    <b> Contact No:</b> 017100000<br>
-	<b> Email:</b> xyz@gmail.com <br>
-	<b> Parent's contact:</b> 01777777322<br></p>
-  </td>
-  
-  <td>
-<img src="upload/<?=$_SESSION['name'].".jpg"?>" width="100px" height="100px"/>  
-  </td>
+    <td colspan="3" align="right" width="80%">
+        <?= $_SESSION['name']; ?>
+        <a href="home.php">Home</a>
+      
+    
+    
+      <a href="logout.php">Logout</a>
+    </td>
+    
+    
+      
+
+  </tr>
+
+
+  <?php
+      $con =mysqli_connect('127.0.0.1','root','','webtech');
+      $sql = "select * from user where id='{$id}'";
+      $result = mysqli_query($con, $sql);
+      $row=mysqli_fetch_assoc($result);
+
+  ?>
+
+  <tr>
+    <td  align="right" width="30%">
+      <b>ID: <br>
+      Name: <br>
+      Gender: <br>
+      Date Of Birth: <br>
+      Blood Group: <br>
+      Maritual Status: <br>
+      E-Mail: <br>
+      Contact Number:</b> <br>
+
+      
+    </td>
+
+    <td  align="">
+      <?=$row['id']?> <br>
+      <?=$row['name']?> <br>
+      <?=$row['gender']?> <br>
+      <?=$row['dob']?> <br>
+      <?=$row['bg']?> <br>
+      <?=$row['marstatus']?> <br>
+      <?=$row['email']?> <br>
+      <?=$row['contactnum']?> <br>
+
+    </td>
+
+    <td>
+      <img src="upload/<?=$_SESSION['name'].".jpg"?>" width="125px" height="100px"/>
+    </td>
   </tr>
 
   <tr>
-  	<td align="left">
-  		<a href="home.php">Home</a>
-  		
-  	</td>
-  	<td align="right">
-  		<a href="logout.php">Logout</a>
-  	</td>
+    <td align="right" width="30%">
+      <b>Address: <br>
+      Emergency Contact Person: <br>
+      Emergency Contact Number: <br>
+      Relationship with:</b> <br>
+
+    </td>
+    <td colspan="2" align="left">
+      <i><?=$row['address']?></i> <br>
+      <?=$row['ecp']?> <br>
+      <?=$row['ecn']?> <br>
+      <?=$row['relwadmin']?> <br>
+    </td>
   </tr>
+
+
+  
 
   </table><br>
 
