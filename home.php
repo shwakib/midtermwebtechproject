@@ -78,6 +78,24 @@
 			<td >
 				<a href="changepassword.php">Change Password</a>
 			</td>
+
+
+
+			<select name="testdata">
+							<option selected="selected">
+								Choose One
+							</option>
+							<?php 
+							$con =mysqli_connect('127.0.0.1','root','','webtech');
+			$sql = "select * from user";
+			$result = mysqli_query($con, $sql);
+			while($row=mysqli_fetch_assoc($result)){
+
+							?>
+							<option value="<?=$row['name']?>"><?=$row['name']?></option>
+						<?php } ?>
+
+						</select>
 		</tr>
 
 		

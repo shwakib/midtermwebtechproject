@@ -56,7 +56,10 @@
 			$con =mysqli_connect('127.0.0.1','root','','webtech');
 			$sql = "select * from user";
 			$result = mysqli_query($con, $sql);
+			
+						
 
+			
 		?>
 
 		<table border="1">
@@ -102,6 +105,8 @@
 					<td>
 						<a href="">Edit</a>|
 						<a href="">Delete</a>
+
+						
 					</td>
 					
 				</tr>
@@ -109,8 +114,30 @@
 
 			<tr>
 					<td colspan="14" align="right">
+						
+						<select name="testdata">
+							<option selected="selected">
+								Choose One
+							</option>
+							<?php 
+							
+
+							foreach ($row as $name => $item)
+							{
+								?>
+								<option value="<?php echo strtolower($item); ?>">
+									<?php echo $item; ?>
+								</option>
+							<?php
+							}
+							?>
+
+						</select>
+
 						<a href="home.php"> Back</a> | 
-						<a href="logout.php"> Logout</a> 
+						<a href="logout.php"> Logout</a> 		
+					
+
 					</td>
 			</tr>
 
