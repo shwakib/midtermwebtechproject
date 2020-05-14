@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<form method="POST" action="registrationuser.php">
+	<form method="POST" action="updateadmininfo.php">
 		<fieldset>
 			<legend>
 				Update Profile
@@ -21,36 +21,14 @@
 				<table>
 					<tr>
 						<td>ID:</td>
-						<td><input type="text" value="<?=$_SESSION['id']?>" id="rid" name="rid" readonly=""></td>
+						<td><input type="text" value="<?=$_SESSION['id']?>" id="rid" name="rid" readonly></td>
 					</tr>
 
 					<tr>
 						<td>Name:</td>
-						<td><input type="text" id="rname" name="rname"></td>
+						<td><input type="text" id="rname" name="rname" value="<?=$_SESSION['name']?>" ></td>
 					</tr>
 
-					
-
-					
-
-					<tr>
-						<td>Gender:</td>
-						<td>
-							<input type="radio" id="gender" name="gender" value="Male">Male
-							<input type="radio" id="gender" name="gender" value="Female">Female
-							<input type="radio" name="gender" id="gender" value="Others">Others
-						</td>
-					</tr>
-
-					<tr>
-						<td>Date Of Birth:</td>
-						<td>
-							<input type="Date" id="rdate" name="rdate">
-							<!-- <input type="text" size="2" name="date">/
-							<input type="text" size="2" name="month">/
-							<input type="text" size="2" name="year"> -->
-						</td>
-					</tr>
 
 					<tr>
 						<td>Blood Group:</td>
@@ -134,24 +112,9 @@
 						</td>
 					</tr>
 
-					<tr>
-						<td>Password:</td>
-						<td><input type="password" id="rpassword" name="rpassword"></td>
-					</tr>
-
-					<tr>
-						<td>Confirm Password:</td>
-						<td><input type="password" id="rconfirmpassword" name="rconfirmpassword"></td>
-					</tr>
 					
-					<tr>
-						<td>
-							Image: 
-						</td>
-						<td>
-							<input type="file" name="userpic">
-						</td>
-					</tr>
+					
+					
 
 					<tr>
 						<td colspan="2">
@@ -162,7 +125,7 @@
 
 					<tr>
 						<td>
-										<button><a href="home.php">Update</a></button>	
+										<input type="submit" name="submit" value="Submit">
 										
 						</td>
 						<td align="right">

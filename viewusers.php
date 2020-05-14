@@ -115,24 +115,7 @@
 			<tr>
 					<td colspan="14" align="right">
 						
-						<select name="testdata">
-							<option selected="selected">
-								Choose One
-							</option>
-							<?php 
-							
-
-							foreach ($row as $name => $item)
-							{
-								?>
-								<option value="<?php echo strtolower($item); ?>">
-									<?php echo $item; ?>
-								</option>
-							<?php
-							}
-							?>
-
-						</select>
+						
 
 						<a href="home.php"> Back</a> | 
 						<a href="logout.php"> Logout</a> 		
