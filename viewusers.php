@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Profile Page</title>
+	<title>User's List</title>
 </head>
 <body>
 	
@@ -89,7 +89,7 @@
 
 				<tr>
 					<td><?=$row['id']?></td>
-					<td><a href=""><?=$row['name']?></a></td>
+					<td><a href="userprofilepage.php?id=<?=$row['id']?>"><?=$row['name']?></a></td>
 					<td><?=$row['gender']?></td>
 					<td><?=$row['dob']?></td>
 					<td><?=$row['bg']?></td>

@@ -49,7 +49,7 @@
 				<a href="viewusers.php">View Users</a>
 			</td>
 			<td align="right">
-				<a href="assigndoctor.php">Assign Doctor</a>
+				<a href="assigndoctor.php">Admit Patient</a>
 			</td>
 			
 		</tr>
