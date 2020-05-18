@@ -19,8 +19,8 @@
 		New Password: <input type="password" name="nupassword" value=""><br>
 		Rewrite New Password: <input type="password" name="rnupassword" value=""><br>
 		-----------------------------------------------------<br>
-		<input type="button" name="Change" value="Change">
-		<u><a href="login.php">Home</a></u>
+		<button><a href="login.php">Change password</a></button>
+        <u><a href="patienthome.php">Home</a></u>
 		</fieldset>
 		</form>
 </body>

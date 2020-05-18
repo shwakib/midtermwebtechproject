@@ -24,7 +24,7 @@
 					<input type="text" name="ptsearch">
 				</td>
 				<td>
-					<input type="submit" name="submit" value="Search">
+					<button><a href="doctor1.php">Search</a></button>
 				</td>
 			</tr>
 

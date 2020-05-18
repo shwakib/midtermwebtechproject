@@ -19,34 +19,29 @@
 	 
 	 <tr>
      <td><b>Name</b></td>
-	 <td><b>Specification</b></td>
-	 
+	 <td><b>Specialization</b></td>
+	 <?php
+			$con =mysqli_connect('127.0.0.1','root','','webtech');
+			$sql = "select * from doctorlist";
+			$result = mysqli_query($con, $sql);
+			
+	?>
+	
 	 </tr>
-	 
-	 <tr>
-     <td><a href="doctor1.php">Dr. AGARKHEDKAR SHARAD</a></td>
-	 <td>Plastic Sergon</td>
-	 
-	 </tr>
-	 
-	 <tr>
-     <td><a href="doctor1.php">Doctor 2</a></td>
-	 <td>Medicine</td>
-	 </tr>
-	 
-	 <tr>
-     <td><a href="doctor1.php">Doctor 3</a></td>
-	 <td>Arthopadic</td>
-	 </tr>
-	 <tr>
-	 
-	 <tr>
-     <td><a href="doctor1.php">Doctor 4</a></td>
-	 <td>Cardiology</td>
-	 </tr>
-	 
-	 <td colspan="2" align="center"><u><a href="patienthome.php">Go Home</a></u></td>
-	 </tr>
+	 <?php
+
+
+			while($row=mysqli_fetch_assoc($result))
+			{
+				?>
+
+				<tr>
+					<td><a href="doctor1.php?id=<?=$row['id']?>"><?=$row['name']?></a></td>
+					<td><?=$row['specialization']?></td>
+					
+					
+				</tr>
+		<?php	} ?>
 	 
 	 </table>
 	 </body>

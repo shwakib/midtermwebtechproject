@@ -5,6 +5,11 @@
 	{
 		header("location:login.php");
 	}
+			$id=$_GET['id'];
+			$con =mysqli_connect('127.0.0.1','root','','webtech');
+			$sql = "select * from doctorlist where id='$id'";
+			$result = mysqli_query($con, $sql);
+			$row=mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +22,7 @@
 
 <tr>
 <td width="90%">
-<b><h1>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</h1></b>
+<b><h1><?=$row['name']?></h1></b>
 <p><i>police stuff college,</i><br><i>6/29Mirpur 14,Dhaka.</i><br><b>Contact No:</b>01779595471<br>
 <b>Email:</b>dragarkhedkarshard@gmail.com<br>
 </td>
@@ -69,8 +74,9 @@
 	</tr>
 </table><br><br>
 	
-	<button><a href="makeappoinment.php">Make Appoinment</a></button><br><br>
+	<button><a href="makeappoinment.php?name=<?=$row['name']?>">Make Appoinment</a></button><br><br>
 	<a href="doctorlist.php">Back</a>
+	<a href="logout.php">Logout</a>
 </table><br><br>
 
 

@@ -18,8 +18,8 @@
 		Current Contact: <input type="passsword" name="upassword" value=""> <br>
 		New Contact: <input type="password" name="nupassword" value=""><br>
 		-----------------------------------------------------<br>
-		<input type="button" name="Change" value="Change">
-		<u><a href="patienthome.php">Home</a></u>
+		<button><a href="patienthome.php">Change Contact</a></button>
+        <u><a href="patienthome.php">Home</a></u>
 		</fieldset>
 		</form>
 </body>

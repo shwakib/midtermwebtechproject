@@ -10,9 +10,6 @@ if(isset($_REQUEST['submit']))
 	{
 		if($_REQUEST['rpassword']==$_REQUEST['rconfirmpassword'])
 		{
-			/*$data=$_REQUEST['date'];
-			$data.=$_REQUEST['month'];
-			$data.=$_REQUEST['year'];*/
 
 			$name=$_REQUEST['rname'];
 			$id=$_REQUEST['rid'];

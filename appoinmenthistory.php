@@ -9,9 +9,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Doctor's list</title>
+<title>Appoinment History</title>
 </head>
 <body>
+
+			<?php
+			$con =mysqli_connect('127.0.0.1','root','','webtech');
+			$sql = "select * from appoinmenthistory";
+			$result = mysqli_query($con, $sql);
+			?>
+
    <table border=1 align="center">
    <tr>
      <td colspan="3" align="center"><u><b>Upcoming Appoinments</b></u></td>
@@ -24,18 +31,22 @@
 	 
 	 </tr>
 	 
-	 <tr>
-     <td>10/03/2020</td>
-	 <td>7 pm</td>
-	 <td><a href="doctor1.php">Dr. AGARKHEDKAR SHARAD</a></td>
-	 </tr>
-	 
-	 <tr>
-     <td>13/03/2020</td>
-	 <td>8 pm</td>
-	 <td>Doctor 2</td>
-	 </tr>
+	 <?php
 
+
+			while($row=mysqli_fetch_assoc($result))
+			{
+				?>
+
+				<tr>
+					<td><?=$row['date']?></td>
+					<td><?=$row['time']?></td>
+					<td><a href="doctor1.php"><?=$row['doctorname']?></a></td>
+					
+				</tr>
+		<?php
+	}
+	 ?>
 	 <tr>
      <td><u><a href="patienthome.php">Back</a></u></td>
 	 <td></td>

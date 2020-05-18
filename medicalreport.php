@@ -35,8 +35,8 @@
    </tr>
    
    <tr>
-     <td><b>Conscious</b></td>
-   <td>Yes</td>
+    <td><b>Conscious</b></td>
+    <td>Yes</td>
    
    </tr>
    
