@@ -7,7 +7,7 @@
 			$result = mysqli_query($con, $sql);
 
 
-$data="<select name="; $data .="selecteddoc";$data .="id=";$data .="selecteddoc";$data .=">
+$data="<select name="; $data .="selecteddoc";$data .=" id=";$data .="selecteddoc";$data .=">
 		<option selected=";$data .="selected";$data .=">Choose One</option>";
 
 		while($row=mysqli_fetch_assoc($result))

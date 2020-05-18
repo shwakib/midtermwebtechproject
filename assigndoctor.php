@@ -31,8 +31,40 @@
 
 	function f2()
 	{
-		var docname=document.getElementById('selecteddoc').value;
-		alert(docname);
+		var docname=document.getElementById('selecteddoc');
+		var doctorname=docname.options[docname.selectedIndex].text;
+		//alert(doctorname);
+		
+
+				
+	}
+	
+
+	function f3()
+	{
+		var docname=document.getElementById('selecteddoc');
+		var doctorname=docname.options[docname.selectedIndex].text;
+		/*var doctorname=document.getElementById('selecteddoc');
+		var docname=doctorname.options[docname.selectedIndex].text;
+		alert(docname);*/
+		//alert(doctorname);
+		var patientname=document.getElementById('patientname').value;
+		//alert(patientname);
+		var patientproblem=document.getElementById('patientproblem').value;
+		var selecteddept=document.getElementById('patientdept').value;
+
+		var xhttp = new XMLHttpRequest();
+				xhttp.open("POST","admitpatient.php",true);
+				xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+				xhttp.send('name='+patientname+'&prob='+patientproblem+'&dept='+selecteddept+'&doc='+doctorname);
+				xhttp.onreadystatechange = function()
+				{
+					if (this.readyState == 4 && this.status == 200)
+					{
+						alert(this.responseText);
+						window.location.href="home.php";
+					}
+				}
 	}
 </script>
 
@@ -68,7 +100,7 @@
 
 	<tr>
 		<td>
-			<select name="patientname">
+			<select name="patientname" id="patientname">
 							<option selected="selected">
 								Choose One
 							</option>
@@ -85,7 +117,7 @@
 		</td>
 
 		<td>
-			<input type="text" name="patientproblem" placeholder="Enter Your Problem">
+			<input type="text" name="patientproblem" id="patientproblem" placeholder="Enter Problem">
 		</td>
 
 		<?php 
@@ -117,11 +149,11 @@
 		</td>
 	</tr>
 	 
+	 <tr>
+	 <td colspan="2" align="left"><u><a href="home.php">Go Home</a></u></td>
+	 	<td colspan="2" align="right"><button onclick="f3()">Assign</button></td>
 	 
-	 <td colspan="2" align="left"><u><a href="home.php">Go Home</a></u>
-	 	<td colspan="2" align="right"><u><a href="home.php">Assign</a></u></td>
-	 </td>
-	 </tr>
+	</tr>
 	 
 	 </table>
 	 </body>

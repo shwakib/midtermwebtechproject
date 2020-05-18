@@ -7,24 +7,49 @@
 	}
 ?>
 
+
+<script type="text/javascript">
+	
+	function f2()
+	{
+		var searchitem=document.getElementById('ptsearch').value;
+		//alert(searchitem);
+
+		//
+
+		var xhttp = new XMLHttpRequest();
+				xhttp.open("GET","searchpatientinfo.php?item="+searchitem,true);
+				/*xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');*/
+				xhttp.send();
+
+				xhttp.onreadystatechange = function()
+				{
+					if (this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById('searchresult').innerHTML=this.responseText;
+					}
+				}
+	}
+</script>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Patient Search</title>
 </head>
 <body>
-		<table align="center">
+		<table align="center" >
 			<tr>
 				<td colspan="2">
-					Patient Search 
+					User Search 
 				</td> 
 			</tr>
 			<tr>
 				<td>
-					<input type="text" name="ptsearch">
+					<input type="text" name="ptsearch" id="ptsearch" onkeyup="f2()">
 				</td>
 				<td>
-					<input type="submit" name="submit" value="Search">
+					<input type="submit" name="submit" value="Search" onclick="f2()">
 				</td>
 			</tr>
 
@@ -34,27 +59,16 @@
 				</td>
 			</tr>
 
-			<tr>
-				<td>
-					Patient ID
-				</td>
-				<td>
-					Patient Name
-				</td>
-			</tr>
+		</table>
+			
+		<div id="searchresult"  align="center">
+			
+		</div>
 
+		<table align="center">
 			<tr>
-				<td>
-					17-33789-1
-				</td>
-				<td>
-					<a href="viewusers.php">Nishat Tasnim Haque</a>
-				</td>
-			</tr>
-
-			<tr>
-				<td colspan="2" align="center">
-					<a href="home.php">Home</a>
+				<td colspan=2 align=center >
+					<a href=home.php>Home</a>
 				</td>
 			</tr>
 		</table>
