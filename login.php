@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Login Page</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-	<form method="POST" action="logcheck.php">
+	<form class="box" method="POST" action="logcheck.php">
+		
+   
+   
 		<fieldset>
 			<legend>
 				LOGIN
@@ -20,5 +26,6 @@
 				</center>
 		</fieldset>
 	</form>
+
 </body>
 </html>

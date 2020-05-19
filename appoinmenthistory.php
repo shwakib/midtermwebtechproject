@@ -8,18 +8,20 @@
 ?>
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
 <head>
 <title>Appoinment History</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 			<?php
 			$con =mysqli_connect('127.0.0.1','root','','webtech');
-			$sql = "select * from appoinmenthistory";
+			$sql = "select * from makeappoinment";
 			$result = mysqli_query($con, $sql);
 			?>
 
-   <table border=1 align="center">
+   <form class="box" ><table border=1 align="center">
    <tr>
      <td colspan="3" align="center"><u><b>Upcoming Appoinments</b></u></td>
 	 </tr>
@@ -41,7 +43,7 @@
 				<tr>
 					<td><?=$row['date']?></td>
 					<td><?=$row['time']?></td>
-					<td><a href="doctor1.php"><?=$row['doctorname']?></a></td>
+					<td><a href="doctor1.php"><?=$row['name']?></a></td>
 					
 				</tr>
 		<?php
@@ -54,5 +56,6 @@
 	 </tr>
 	 
 	 </table>
+	</form>
 	 </body>
 	 </html>

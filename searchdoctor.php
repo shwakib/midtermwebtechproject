@@ -10,9 +10,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Patient Search</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<form class="box">
 		<table align="center">
 			<tr>
 				<td colspan="2">
@@ -34,5 +37,6 @@
 				</td>
 			</tr>
 		</table>
-</body>
+		</form>
+	</body>
 </html>

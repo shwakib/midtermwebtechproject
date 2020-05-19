@@ -5,7 +5,8 @@
 	{
 		header("location:login.php");
 	}
-	$name=$_GET['name'];
+	
+  $name=$_GET['name'];
 	
 
 ?>
@@ -15,7 +16,11 @@
 
 	function f1()
 	{
+
+    var name='<?php echo $name;?>';
+    //alert(name);
 		var date=document.getElementById('adate').value;
+    //alert(date);
 		var atime=document.getElementsByName('atime');
            
             for(i=0;i<atime.length;i++)
@@ -25,11 +30,11 @@
                     var time=atime[i].value;
                 }
             }
-            alert(time);
+           // alert(time);
             var xhttp = new XMLHttpRequest();
                 xhttp.open("POST","appointmentconfirm.php",true);
                 xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-                xhttp.send('name='+<?=$name?>+'&date='+date+'&time='+time);
+                xhttp.send('name='+name+'&date='+date+'&time='+time);
                 xhttp.onreadystatechange = function()
                 {
                     if (this.readyState == 4 && this.status == 200)
@@ -45,24 +50,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
 	<title>Make appoinment</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	
-
-	<form >
+<form class="box" method="post">
 	<fieldset>
 	<legend>Select Date and Time</legend>
-		Date: <br><input type="Date" id="adate" name="adate" value=""> <br><br>
+		Date: <br><input type="Date" id="adate"  name="adate" required placeholder=""> <br><br>
 		Time:<br>
-		 <input type="radio" name="atime" id="atime" value="7-9:30 pm">7-9:30 pm<br>
-		      <input type="radio" name="atime" id="atime" value="7-10:00 pm">7-10:00 pm<br>
-		      
+		 <input type="radio" name="atime" id="atime" value="7-9:30 pm" required placeholder="">7-9:30 pm<br>
+		     <!-- <input type="radio" name="atime"  value="7-10:00 pm" required placeholder="">7-10:00 pm<br>
+		      <input type="time" id="appt" name="appt"
+       min="09:00" max="18:00" required>-->
 				
-               <input type="submit" name="submit" onclick="f1()">
+              <!-- <input type="submit" name="insert" required placeholder="makeappoinment" > -->
+              <!-- <input type="submit" name="submit" onclick="f1()" >--><button onclick="f1()">Submit</button>
 				<u><a href="home.php">Back</a></u>
 				<u><a href="logout.php">Logout</a></u>
 		</fieldset>
 		</form>
 </body> 
+
 </html>

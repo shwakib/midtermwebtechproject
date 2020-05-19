@@ -9,10 +9,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
 	<title>Patient Profile</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<form>
+	<form class="box">
 	<fieldset>
 	<u><h1>Patient Profile</h1></u>
 	 <table border="1" width="100%">
@@ -39,7 +41,7 @@
 <button><a href="appoinmenthistory.php">See Appoinment History</a></button><br><br>
 <button><a href="medicalreport.php">See Medical Reports</a></button><br><br>
 <button><a href="prescription.php">See Prescriptions</a></button><br><br><br>
-<a href="searchdoctor.php">Search Doctor</a><br><br>
+<button><a href="searchdoctor.php">Search Doctor</a><br><br></button>
 <u><a href="changepass.php">Change Password</a></u><br>
 <u><a href="changecont.php">Change Contact</a></u><br><br>
 

@@ -9,9 +9,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
 <title>Doctor's list</title>
 </head>
 <body>
+	<form class="box">
    <table border=1 align="center">
    <tr>
      <td colspan="3" align="center"><u><b>Doctor's List</b></u>(click on names to view profile)</td>
@@ -44,5 +47,9 @@
 		<?php	} ?>
 	 
 	 </table>
+	 <a href="patienthome.php">Back</a>
+	<a href="logout.php">Logout</a>
+
+	</form>
 	 </body>
 	 </html>

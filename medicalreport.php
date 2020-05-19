@@ -9,10 +9,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
 <title>Medical Report</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<table border ="1" cellspacing="0" width="100%">
+<form class="box">
+  <table border ="1" cellspacing="0" width="100%">
 
 
 <tr>
@@ -23,6 +26,7 @@
 </td>
 <td><img src="dr1.jpg" width="200px" height="200px"/></td>
 </tr>
+
 <table border=1 align="center">
    <tr>
      <td colspan="3" align="center"><u><b>Medical Incident Report</b></u></td>
@@ -55,7 +59,7 @@
      <td><b>Action Taken</td>
    <td>Surgery</td>
    </tr>
-
+</form>
 </table><br><br>
 <u><a href="patienthome.php">Go Home</a></u>
 <button><u><a href="logout.php">Logout</a></u></button>

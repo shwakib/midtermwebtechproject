@@ -14,15 +14,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">	
 <title>Doctor Profile</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<form class="box">
 <table border ="1" cellspacing="0" width="100%">
 
 
 <tr>
 <td width="90%">
-<b><h1><?=$row['name']?></h1></b>
+<b><h3><?=$row['name']?></h3></b>
 <p><i>police stuff college,</i><br><i>6/29Mirpur 14,Dhaka.</i><br><b>Contact No:</b>01779595471<br>
 <b>Email:</b>dragarkhedkarshard@gmail.com<br>
 </td>
@@ -82,6 +85,7 @@
 
 
 </table>
+</form>
 </body>
 
 </html>

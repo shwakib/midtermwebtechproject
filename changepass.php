@@ -9,19 +9,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<meta charset="utf-8">
+	<title>Change Password</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<form>
+	<form class="box">
 	<fieldset>
-	<legend>LOGIN</legend>
+	
 		Current Password: <input type="passsword" name="upassword" value=""> <br>
 		New Password: <input type="password" name="nupassword" value=""><br>
 		Rewrite New Password: <input type="password" name="rnupassword" value=""><br>
-		-----------------------------------------------------<br>
 		<button><a href="login.php">Change password</a></button>
         <u><a href="patienthome.php">Home</a></u>
-		</fieldset>
+		
 		</form>
 </body>
 </html>

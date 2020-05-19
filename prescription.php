@@ -9,10 +9,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
 <title>Prescription</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<table border ="1" cellspacing="0" width="100%">
+  <form class="box">
+<table  border ="1" cellspacing="0" width="100%">
 
 
 <tr>
@@ -57,8 +60,9 @@
    </tr>
 
 </table><br><br>
-<u><a href="patienthome.php">Go Home</a></u>
+<button><u><a href="patienthome.php">Go Home</a></u></button>
 <button><u><a href="logout.php">Logout</a></u></button>
+</form>
 </body>
 
 </html>
