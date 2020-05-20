@@ -1,4 +1,0 @@
-Maliha|17-33699-1|123456|Female|m.maliha997@gmail.com|1997-05-26|B+|Maliha|admin
-Shohag|852963|123456|Male|shohag@gmail.com|2020-03-09|B-|Shohag|patient
-Moshur|741852|123456|Male|moshiur@gmail.com|2020-03-16|A-|Moshur|Staff
-Tuhin|987654|123456|Male|tuhin@gmail.com|2020-01-12|A-|Tuhin|doctor
