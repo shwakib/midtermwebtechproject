@@ -20,9 +20,12 @@
 
 
 
+
+
+
 	
 	
-	<table border="1" align="center" width="100">
+	<table border="1" align="center">
 		<tr>
 			<td colspan="3" align="center">
 				Welcome <?= $_SESSION['name'] ?> 
@@ -49,7 +52,8 @@
 				<a href="viewusers.php">View Users</a>
 			</td>
 			<td align="right">
-				<a href="assigndoctor.php">Admit Patient</a>
+				<a href="assigndoctor.php">Admit Patient</a><br>
+				
 			</td>
 			
 		</tr>

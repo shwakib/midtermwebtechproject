@@ -92,6 +92,8 @@ if(isset($_POST['uid']))
 			$_SESSION['pass']= $pass;
 			$_SESSION['type']= $user['type'];
 			$_SESSION['name']= $user['name'];
+			
+			setcookie('id',$id, time()+3600, '/');
 		}
 		else
 		{

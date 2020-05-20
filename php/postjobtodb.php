@@ -29,13 +29,10 @@ $behavecom2=$_POST['behavecom2'];
 $behavecom3=$_POST['behavecom3'];
 $benefits=$_POST['benefits'];
 $councilreq=$_POST['councilreq'];
-$row1="NULL";
 
-echo($pos);
-echo($councilreq);
 
 	$con =mysqli_connect('127.0.0.1','root','','webtech');
-	$sql="insert into jobcircular values('1','{$pos}','{$dept}','{$func}','{$emtype}','{$officetime}','{$joblevel}','{$reports}','{$officeloc}','{$salary}','{$agelimit}','{$edureq}','{$expreq}','{$jobrep1}','{$jobrep2}','{$jobrep3}','{$jobrep4}','{$adddjobrep}','{$adddjobrep2}','{$adddjobrep3}','{$adddjobrep4}','{$techcom}','{$techcom2}','{$techcom3}','{$behavecom}','{$behavecom2}','{$behavecom3}','{$benefits}','{$councilreq}')";
+	$sql= "insert into circularlist values('{$pos}','{$dept}','{$func}','{$emtype}','{$officetime}','{$joblevel}','{$reports}','{$officeloc}','{$salary}','{$agelimit}','{$edureq}','{$expreq}','{$jobrep1}','{$jobrep2}','{$jobrep3}','{$jobrep4}','{$adddjobrep}','{$adddjobrep2}','{$adddjobrep3}','{$adddjobrep4}','{$techcom}','{$techcom2}','{$techcom3}','{$behavecom}','{$behavecom2}','{$behavecom3}','{$benefits}','{$councilreq}')";
 
 
 
@@ -44,7 +41,7 @@ echo($councilreq);
 	//$sql1="insert into circularlist values(1,'{$pos}','{$dept}')";
 	//mysqli_query($con, $sql);
 
-		if(mysqli_query($con, $sql1))
+		if(mysqli_query($con, $sql))
 			{
 			echo "Registration done!";
 			header("location:../views/home.php");

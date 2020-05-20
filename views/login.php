@@ -38,15 +38,15 @@
 						}
 						else if(this.responseText.match('doctor'))
 						{
-							window.location.href='dochome.php';
+							window.location.href='profile.php';
 						}
 						else if(this.responseText.match('patient'))
 						{
-							window.location.href='pathome.php';
+							window.location.href='patienthome.php';
 						}
 						else if(this.responseText.match('staff'))
 						{
-							window.location.href='staffhome.php';
+							window.location.href='profileN.php';
 						}
 										
 						else

@@ -84,7 +84,7 @@ if(isset($_REQUEST['submit']))
 }
 else
 {
-	header("location:register.php");
+	header("location:../views/register.php");
 }
 
 ?>

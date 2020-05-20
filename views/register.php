@@ -5,6 +5,14 @@
 </head>
 <body>
 
+<style>
+	fieldset {
+		border: 1px solid rgb(255, 232, 57);
+		width: 450px;
+		float: center;
+	}
+</style>
+
 
 
 	<script type="text/javascript">
@@ -48,7 +56,37 @@
             var cpass=document.getElementById('rconfirmpassword').value;
             var image=document.getElementByName('userpic').value;
 
-            alert(image);
+           if(id==""||name==""||gendervalue=""||date=""||bloodgroup==""||marstatusvalue=""||email==""||contact==""||address==""||ecp==""||ecn==""||relation==""||pass==""||cpass=="")
+           {
+           			document.getElementById('registerdiv').innerHTML="null submission";
+           } 
+           else
+           {
+           	var validname=name.split('');
+           	for(var i=0;i<validname.length;i++)
+           	{
+           		if(((validname[i]>='A'&&validname[i]<=['Z'])||(validname[i]>='a'&&validname[i]<='z')))
+           		{
+           			continue;
+           		}
+           		else
+           		{
+           			name="false";
+           			break;
+           		}
+
+           	}
+
+           	if(name=="false")
+           	{
+           		document.getElementById('registerdiv').innerHTML="Must be all letters";
+           	}
+           	else
+           	{
+
+           	}
+           }
+            
 		}
 	</script>
 
@@ -196,6 +234,10 @@
 
 					<tr>
 						<td colspan="2">
+
+							<div id="registerdiv">
+								
+							</div>
 							
 						</td>
 						
@@ -208,7 +250,7 @@
 										<a href="login.php">Login</a>
 						</td>
 						<td align="right">
-							<a href="homemain.php" align="right">Home</a>
+							<a href="../views/login.php" align="right">Home</a>
 						</td>
 					</tr>	
 

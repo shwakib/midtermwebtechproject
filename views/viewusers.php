@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if(!isset($_SESSION['name']))
+	if(!isset($_COOKIE['id']))
 	{
 		header("location:login.php");
 	}
@@ -15,7 +15,8 @@
 	
 		
 		<?php
-			$con =mysqli_connect('127.0.0.1','root','','webtech');
+			//include('../services/db.php');
+			$con=mysqli_connect('127.0.0.1','root','','webtech');
 			$sql = "select * from user";
 			$result = mysqli_query($con, $sql);
 			
@@ -65,7 +66,7 @@
 					<td><img src="../upload/<?=$row['name'].".jpg"?>" width="80px" height="80px"></td>
 					<td><?=$row['type']?></td>
 					<td>
-						<a href="../php/edituser.php?id=<?=$row['id']?>">Edit</a>|
+						<a href="../views/edituser.php?id=<?=$row['id']?>">Edit</a>|
 						<a href="../php/deleteusers.php?id=<?=$row['id']?>">Delete</a>
 
 						
