@@ -24,7 +24,7 @@ if(isset($_REQUEST['submit']))
 				$_SESSION['password']=$pass;
 				$_SESSION['name']=$data[0];
 				fclose($myfile);
-				header("location:patienthome.php");
+				header("location:../views/patienthome.php");
 			}
 			else
 			{

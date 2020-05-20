@@ -62,7 +62,7 @@
 </form>
 </table><br><br>
 <u><a href="patienthome.php">Go Home</a></u>
-<button><u><a href="logout.php">Logout</a></u></button>
+<button><u><a href="../php/logout.php">Logout</a></u></button>
 </body>
 
 </html>

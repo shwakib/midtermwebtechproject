@@ -1,9 +1,9 @@
 <?php
-
-session_start();
-
-session_destroy();
-header("location:../views/login.php");
-setcookie('id', '', time()-10, '/');
+	session_start();
+	//unset($_SESSION['uname']);
+	//session_destroy();
+	
+	setcookie('username', '', time()-10, '/');
+	header("location: ../views/login.php");
 
 ?>

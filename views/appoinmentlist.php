@@ -52,7 +52,7 @@
 	 <tr>
      <td><u><a href="patienthome.php">Back</a></u></td>
 	 <td></td>
-	 <td><u><a href="logout.php">Logout</a></u></td>
+	 <td><u><a href="../php/logout.php">Logout</a></u></td>
 	 </tr>
 	 
 	 </table>

@@ -32,7 +32,7 @@
   </td>
   
   <td>
- <img src="../upload/"dr1.jpg"" width="125px" height="100px"/>
+<img src="../upload/dr1.jpg" width="100px" height="100px"/>  
   </td>
   </tr>
 
@@ -45,7 +45,7 @@
 <u><a href="changepass.php">Change Password</a></u><br>
 <u><a href="changecont.php">Change Contact</a></u><br><br>
 
-<u><a href="logout.php">Logout</a></u><br>	
+<u><a href="../php/logout.php">Logout</a></u><br>	
 
 		</fieldset>
 		</form>

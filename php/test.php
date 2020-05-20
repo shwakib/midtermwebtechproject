@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if(!isset($_COOKIE['id']))
+	if(!isset($_SESSION['name']))
 	{
 		header("location:login.php");
 	}
@@ -9,14 +9,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User's List</title>
+	<title>Profile Page</title>
 </head>
 <body>
 	
-		
+		<!-- <table border="1px" align="center" border-spacing='5px's>
+			<tr>
+				<td colspan="3" align="center">Users
+			</tr>
+			<tr>
+				<td>ID</td>
+				<td>NAME</td>
+				<td>USER TYPE</td>
+			</tr>
+			<tr>
+				<td>15-10101-1</td>
+				<td>Bob</td>
+				<td>Admin</td>
+			</tr>
+			<tr>
+				<td>16-10102-1</td>
+				<td>Anne</td>
+				<td>Patient</td>
+			</tr>
+			<tr>
+				<td>16-10103-2</td>
+				<td><a href="doctorprofile.php">Dr. AGARKHEDKAR SHARAD RAMKRISHNA</a></td>
+				<td>Doctor</td>
+			</tr>
+			<tr>
+				<td>16-10104-3</td>
+				<td>James</td>
+				<td>Staff</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="right"><u><a href="home.php">Go Home</a></u></td>
+			</tr>
+			
+		</table> -->
+
+			
+
+
+
 		<?php
-			//include('../services/db.php');
-			$con=mysqli_connect('127.0.0.1','root','','webtech');
+			$con =mysqli_connect('127.0.0.1','root','','webtech');
 			$sql = "select * from user";
 			$result = mysqli_query($con, $sql);
 			
@@ -52,7 +89,7 @@
 
 				<tr>
 					<td><?=$row['id']?></td>
-					<td><a href="userprofilepage.php?id=<?=$row['id']?>"><?=$row['name']?></a></td>
+					<td><a href=""><?=$row['name']?></a></td>
 					<td><?=$row['gender']?></td>
 					<td><?=$row['dob']?></td>
 					<td><?=$row['bg']?></td>
@@ -63,11 +100,11 @@
 					<td><?=$row['ecn']?></td>
 					<td><?=$row['relwadmin']?></td>
 
-					<td><img src="../upload/<?=$row['name'].".jpg"?>" width="80px" height="80px"></td>
+					<td><img src="upload/<?=$row['name'].".jpg"?>" width="80px" height="80px"></td>
 					<td><?=$row['type']?></td>
 					<td>
-						<a href="../views/edituser.php?id=<?=$row['id']?>">Edit</a>|
-						<a href="../php/deleteusers.php?id=<?=$row['id']?>">Delete</a>
+						<a href="">Edit</a>|
+						<a href="">Delete</a>
 
 						
 					</td>

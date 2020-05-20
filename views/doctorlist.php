@@ -40,7 +40,7 @@
 
 				<tr>
 					<td><a href="doctor1.php?id=<?=$row['id']?>"><?=$row['name']?></a></td>
-					<td><?=$row['dept']?></td>
+					<td><?=$row['specialization']?></td>
 					
 					
 				</tr>
@@ -48,7 +48,7 @@
 	 
 	 </table>
 	 <a href="patienthome.php">Back</a>
-	<a href="logout.php">Logout</a>
+	<a href="../php/logout.php">Logout</a>
 
 	</form>
 	 </body>
