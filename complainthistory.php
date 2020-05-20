@@ -5,12 +5,32 @@
 	{
 		header("location:login.php");
 	}
+
+			$con =mysqli_connect('127.0.0.1','root','','webtech');
+			$sql = "select * from complaintlist";
+			$result = mysqli_query($con, $sql);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Complaint</title>
+
+	<style> 
+div.a {
+  white-space: nowrap; 
+  width: 200px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*border: 1px solid #000000;*/
+}
+
+/*div.a:hover {
+  overflow: visible;
+}*/
+
+
+</style>
 </head>
 <body>
 
@@ -25,95 +45,34 @@
 		 		<td>
 		 			User
 		 		</td>
-		 		<td>
-		 			Action Taken
-		 		</td>
+		 		
 		 	</tr>
 
-		 	<tr>
-		 		<td>
-		 			02-01-2020
-		 		</td>
-		 		<td>
-		 			<a href="">Nurse was not available</a>
-		 		</td>
-		 		<td>
-		 			User 1
-		 		</td>
-		 		<td>
-		 			<select name="actiontaken">
-		 				
-		 				<option value="yes">Yes</option>
-		 				<option value="no">No</option>
-		 			</select>
-		 		</td>
-		 	</tr>
+		 	<?php
 
-		 	<tr>
-		 		<td>
-		 			20-01-2020
-		 		</td>
-		 		<td>
-		 			<a href="">Doctor did not came ..</a>
-		 		</td>
-		 		<td>
-		 			User 1
-		 		</td>
-		 		<td>
-		 			<select name="actiontaken">
-		 				
-		 				<option value="yes">Yes</option>
-		 				<option value="no">No</option>
-		 			</select>
-		 		</td>
-		 	</tr>
+		 		while ($row=mysqli_fetch_assoc($result)) 
+		 		{
+		 			?>
+		 			<tr>
+		 			<td><?=$row['date']?></td>
+		 			<td><div class="a"><a href="complaintactionpage.php?id=<?=$row['id']?>"><?=$row['complaint']?></a></div></td>
+		 			<td><?=$row['userid']?></td>
+		 			</tr>
+		 			
+		 		<?php } ?>
 
-		 	<tr>
-		 		<td>
-		 			20-02-2020
-		 		</td>
-		 		<td>
-		 			<a href="">Ward boy was not..</a>
-		 		</td>
-		 		<td>
-		 			User 2
-		 		</td>
-		 		<td>
-		 			<select name="actiontaken">
-		 				
-		 				<option value="yes">Yes</option>
-		 				<option value="no">No</option>
-		 			</select>
-		 		</td>
-		 	</tr>
+		 	
+		 	
 
-		 	<tr>
-		 		<td>
-		 			28-02-2020
-		 		</td>
-		 		<td>
-		 			<a href="">Nurse behaviour was not..</a>
-		 		</td>
-		 		<td>
-		 			User 3
-		 		</td>
-		 		<td>
-		 			<select name="actiontaken">
-		 				
-		 				<option value="yes">Yes</option>
-		 				<option value="no">No</option>
-		 			</select>
-		 		</td>
+		 	
 
 
-		 	</tr>
+		 	
 		 	<tr>
-		 		<td colspan="2" align="left">
+		 		<td colspan="3" align="left">
 		 			<a href="home.php">Home</a>
 		 		</td>
-		 		<td colspan="2" align="right">
-		 			<a href="submitaction.php">Submit Action</a>
-		 		</td>
+		 		
 		 	</tr>
 
 

@@ -5,151 +5,53 @@
 	{
 		header("location:login.php");
 	}
+
+			$con =mysqli_connect('127.0.0.1','root','','webtech');
+			$sql = "select * from appointmentlist";
+			$result = mysqli_query($con, $sql);
+
 ?>
 
 <!DOCTYPE html>
 <table>
 	<head>
 		<title>Apoinment History</title>
+
+		
 	</head>
 	<body>
 		<center><table border="1" width="100%">
 			<tr>
 				<td>Date</td>
+				<td>Time</td>
 				<td>Doctor Name</td>
 				<td>Patient Name</td>
-				<td>Time</td>
-				<td>Reason Of Visit</td>
+				
+				<td>Reason Of visit</td>
+
+				<!-- <textarea></textarea> -->
 				
 			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Maruf Ahamed</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
+		<?php	
+			while($row=mysqli_fetch_assoc($result))
+
+			{
+				?>
+
+				<tr>
+				<td><?=$row['date']?></td>
+				<td><?=$row['time']?></td>
+				<td><?=$row['docname']?></td>
+				<td><?=$row['patientname']?></td>
 				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 02</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
+				<td><textarea readonly><?=$row['visitreason']?></textarea></td>
+
+				<!-- <textarea></textarea> -->
 				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 02</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 02</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 02</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-		<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 02</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 02</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 03</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 04</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-		<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 05</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 06</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 7</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 08</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 09</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 10</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
-			<tr>
-				<td>1-02-2010</td>
-				<td>Dr. AGARKHEDKAR SHARAD RAMKRISHNA</td>
-				<td>Patient 11</td>
-				<td>01-02-2010</td>
-				<td>Accident</td>
-				
-			</tr>
+				</tr>
+<?php
+			} ?>
+			
 		</table><br>
 		<center><button><a href="home.php">Back</a></button><br><br>
 	</body>

@@ -70,7 +70,7 @@
 
 		<tr>
 			<td >
-				<a href="dutyschedule.php">Create Duty Schedule</a>
+				<a href="postdutyschedule.php">Create Duty Schedule</a>
 			</td>
 			<td >
 				<a href="searchpatient.php">Search Patient</a>
@@ -88,9 +88,12 @@
 
 		<tr>
 			<td>
-				<a href="publishjob.php">Publish Job Vacancy</a>
+				<a href="postjob.php">Publish Job Vacancy</a>
 			</td>
-			<td colspan="2" align="right">
+			<td>
+				<a href="dutyschedule.php">Check Duty Schedule</a>
+			</td>
+			<td align="right">
 				<a href="logout.php">Log Out</a>
 			</td>
 		</tr>

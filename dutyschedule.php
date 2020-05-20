@@ -1,12 +1,3 @@
-<?php
-	session_start();
-
-	if(!isset($_SESSION['name']))
-	{
-		header("location:login.php");
-	}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,71 +11,47 @@
 	 
 	 <tr>
      <td><b>Day</b></td>
-	 <td><b>12 am- 6am</b></td>
-	 <td><b>6 am- 12pm</b></td>
-	 <td><b>12pm- 6pm</b></td>
-	 <td><b>6 pm- 12am</b></td>	 
+	 <td><b>12 AM- 8AM</b></td>
+
+	 <td><b>8AM-4PM</b></td>
+	 <td><b>4PM- 12AM</b></td>	 
 	 </tr>
+
+	 
+
+	 <?php
+			$con =mysqli_connect('127.0.0.1','root','','webtech');
+			$sql = "select * from dutylist";
+			$result = mysqli_query($con, $sql);
+			
+						
+			while($row=mysqli_fetch_assoc($result))
+			{
+
+
+			
+	?>
+
+			<tr>
+				<td><?=$row['day']?></td>
+				<td><?=$row['12am']?></td>
+				<td><?=$row['8am']?></td>
+				<td><?=$row['4am']?></td>
+
+			</tr>
+
+		<?php } ?>
 	 
 	 <tr>
-     <td><b>Saturday</b></td>
-	 <td><b>Doctor1, Doctor2, Nurse1, Nurse2, Nurse3, Receptionist1</b></td>
-	 <td><b>Doctor3, Doctor4, Nurse4, Nurse5, Nurse6, Receptionist2, Receptionist3 </b></td>
-	 <td><b>Doctor5, Doctor5, Nurse7, Nurse8, Nurse9, Receptionist4, Receptionist5 </b></td>
-	 <td><b>Doctor6, Doctor7, Nurse10, Nurse11, Nurse12, Receptionist6, Receptionist7 </b></td>
-	 </tr>
-	 
-	 <tr>
-     <td><b>Sunday</b></td>
-	 <td><b>Doctor1, Doctor2, Nurse1, Nurse2, Nurse3, Receptionist1</b></td>
-	 <td><b>Doctor3, Doctor4, Nurse4, Nurse5, Nurse6, Receptionist2, Receptionist3 </b></td>
-	 <td><b>Doctor5, Doctor5, Nurse7, Nurse8, Nurse9, Receptionist4, Receptionist5 </b></td>
-	 <td><b>Doctor6, Doctor7, Nurse10, Nurse11, Nurse12, Receptionist6, Receptionist7 </b></td>
-	 </tr>
-
-	 <tr>
-     <td><b>Monday</b></td>
-	 <td><b>Doctor1, Doctor2, Nurse1, Nurse2, Nurse3, Receptionist1</b></td>
-	 <td><b>Doctor3, Doctor4, Nurse4, Nurse5, Nurse6, Receptionist2, Receptionist3 </b></td>
-	 <td><b>Doctor5, Doctor5, Nurse7, Nurse8, Nurse9, Receptionist4, Receptionist5 </b></td>
-	 <td><b>Doctor6, Doctor7, Nurse10, Nurse11, Nurse12, Receptionist6, Receptionist7 </b></td>
-	 </tr>
-	 
-	 <tr>
-     <td><b>Tuesday</b></td>
-	 <td><b>Doctor1, Doctor2, Nurse1, Nurse2, Nurse3, Receptionist1</b></td>
-	 <td><b>Doctor3, Doctor4, Nurse4, Nurse5, Nurse6, Receptionist2, Receptionist3 </b></td>
-	 <td><b>Doctor5, Doctor5, Nurse7, Nurse8, Nurse9, Receptionist4, Receptionist5 </b></td>
-	 <td><b>Doctor6, Doctor7, Nurse10, Nurse11, Nurse12, Receptionist6, Receptionist7 </b></td>
-	 </tr>
-
-	 <tr>
-     <td><b>Wednesday</b></td>
-	 <td><b>Doctor1, Doctor2, Nurse1, Nurse2, Nurse3, Receptionist1</b></td>
-	 <td><b>Doctor3, Doctor4, Nurse4, Nurse5, Nurse6, Receptionist2, Receptionist3 </b></td>
-	 <td><b>Doctor5, Doctor5, Nurse7, Nurse8, Nurse9, Receptionist4, Receptionist5 </b></td>
-	 <td><b>Doctor6, Doctor7, Nurse10, Nurse11, Nurse12, Receptionist6, Receptionist7 </b></td>
-	 </tr>
-
-	 <tr>
-     <td><b>Thursday</b></td>
-	 <td><b>Doctor1, Doctor2, Nurse1, Nurse2, Nurse3, Receptionist1</b></td>
-	 <td><b>Doctor3, Doctor4, Nurse4, Nurse5, Nurse6, Receptionist2, Receptionist3 </b></td>
-	 <td><b>Doctor5, Doctor5, Nurse7, Nurse8, Nurse9, Receptionist4, Receptionist5 </b></td>
-	 <td><b>Doctor6, Doctor7, Nurse10, Nurse11, Nurse12, Receptionist6, Receptionist7 </b></td>
-	 </tr>
-
-	 <tr>
-     <td><b>Friday</b></td>
-	 <td><b>Doctor1, Doctor2, Nurse1, Nurse2, Nurse3, Receptionist1</b></td>
-	 <td><b>Doctor3, Doctor4, Nurse4, Nurse5, Nurse6, Receptionist2, Receptionist3 </b></td>
-	 <td><b>Doctor5, Doctor5, Nurse7, Nurse8, Nurse9, Receptionist4, Receptionist5 </b></td>
-	 <td><b>Doctor6, Doctor7, Nurse10, Nurse11, Nurse12, Receptionist6, Receptionist7 </b></td>
+	 	<td colspan="2"><u><a href="home.php">Go Home</a></u>
+     </td>
+     <td colspan="2" align="right">
+     	<button><u><a href="logout.php">Logout</a></u></button>
+     </td>
 	 </tr>
 	 </table><br>
 
-	 <u><a href="home.php">Go Home</a></u>
-     <button><u><a href="logout.php">Logout</a></u></button>
+	 
 
 	 </body>
-	 </html>
+</html>
