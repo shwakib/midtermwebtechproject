@@ -84,11 +84,60 @@
            	}
            	else
            	{
+           			var position=email.search("@");
+           			if(position ==-1 || position== 0)
+           			{
+           				document.getElementById('registerdiv').innerHTML="invalid email";
+           				email="no";
+           			}
+           			else
+           			{
+           				var position1= email.search(".com");
+						if(position1<position)
+							{
+								document.getElementById('registerdiv').innerHTML="invalid email";
+								email= "no";
+							}
+							else
+							{
+								var valemail= email.split();
+								if(!((valemail[0]>='A' && valemail[0]<='Z') || (valemail[0]>='a' && valemail[0]<='z')))
+ 									{
+ 										document.getElementById('registerdiv').innerHTML="Invalid email";
+									email= "no";
+									}
+									else
+									{
+										for(var a=1; a<valemail.length;a++)
+										{
+											if(((valemail[a]>='A'&&valemail[a]<='Z') ||(valemail[a]>='a'&&valemail[a]<='z') || valemail[a]=='.'|| valemail[a]=='@' ||(valemail[a]>=0 && valemail[a]<=9) ))
+	
+												{ 
+													continue;
+												}
 
-           	}
-           }
-            
-		}
+												else
+												{
+													document.getElementById('registerdiv').innerHTML="invalid email";  
+													email= "no";
+													break;
+												}
+										}
+									}
+							}
+									if(email=="no")
+									{
+										document.getElementById('registerdiv').innerHTML="invalid email";		
+									}
+
+									
+					}
+				}
+			}
+
+
+        }
+           
 	</script>
 
 	<form method="POST" action="../php/registrationuser.php" enctype="multipart/form-data">
