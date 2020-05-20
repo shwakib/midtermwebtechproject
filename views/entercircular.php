@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<form method="POST" action="postjobtodb.php">
+	<form method="POST" action="../php/postjobtodb.php">
 		<fieldset>
 			<legend>Enter Circular</legend>
 			<table>

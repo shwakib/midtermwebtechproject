@@ -19,7 +19,7 @@
 			else
 			{
 				var xhttp = new XMLHttpRequest();
-				xhttp.open("POST","loginverify.php",true);
+				xhttp.open("POST","../php/loginverify.php",true);
 				xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 				xhttp.send('uid='+id+'&pass='+pass);
 
@@ -34,7 +34,7 @@
 					
 						if(this.responseText.match('admin'))	
 						{
-							window.location.href='home.php';
+							window.location.href='../views/home.php';
 						}
 						else if(this.responseText.match('doctor'))
 						{

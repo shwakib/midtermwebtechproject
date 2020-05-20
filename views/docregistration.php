@@ -13,10 +13,10 @@
 </head>
 <body>
 
-	<form method="POST" action="staffregister.php" enctype="multipart/form-data">
+	<form method="POST" action="../php/docregister.php" enctype="multipart/form-data">
 		<fieldset>
 			<legend>
-				Staff Registration
+				Doctor Registration
 			</legend>
 				<table>
 					<tr>
@@ -150,14 +150,16 @@
 						</td>
 					</tr>	
 
-					<tr>
+										<tr>
 						<td>
-							Staff Type
+							Doctor Specialization:
 						</td>
 						<td>
-							<select name="stafftype">
-								<option value="Nurse">Nurse</option>
-								<option value="Reciptionist">Reciptionist</option>
+							<select name="docspecialization">
+								<option value="Pediatrician">Pediatrician</option>
+								<option value="Obstetrician">Obstetrician</option>
+								<option value="Surgeon">Surgeon</option>
+								<option value="Cardiologist">Cardiologist</option>
 							</select>
 							
 						</td>

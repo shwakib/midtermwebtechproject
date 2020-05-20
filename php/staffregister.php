@@ -1,9 +1,8 @@
 <?php
 
-
 if(isset($_REQUEST['submit']))
-{	
-	if(empty($_REQUEST['rid']) || empty($_REQUEST['rname']) || empty($_REQUEST['gender']) || empty($_REQUEST['rdate']) || empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['marstatus'])||empty($_REQUEST['remail'])|| empty($_REQUEST['rnumber'])||empty($_REQUEST['raddress'])||empty($_REQUEST['remname'])||empty($_REQUEST['remnumber'])||empty($_REQUEST['rrelastionship'])||empty($_REQUEST['rpassword'])||empty($_REQUEST['rconfirmpassword'])||empty($_REQUEST['patienttype']))
+{
+	if(empty($_REQUEST['rid']) || empty($_REQUEST['rname']) || empty($_REQUEST['gender']) || empty($_REQUEST['rdate']) || empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['marstatus'])||empty($_REQUEST['remail'])|| empty($_REQUEST['rnumber'])||empty($_REQUEST['raddress'])||empty($_REQUEST['remname'])||empty($_REQUEST['remnumber'])||empty($_REQUEST['rrelastionship'])||empty($_REQUEST['rpassword'])||empty($_REQUEST['rconfirmpassword'])||empty($_REQUEST['stafftype']))
 		{
 		echo "Field Cannot Be Empty";
 		}
@@ -56,20 +55,20 @@ if(isset($_REQUEST['submit']))
 			echo "Error";
 			}
 
-			$type='patient';
+			$type='staff';
 			/*$myfile=fopen('userregistration.txt','a');
 			fwrite($myfile,"$name|$id|$password|$gender|$email|$dob|$bg|$picname|$type\r\n");
 			fclose($myfile);*/
 
-			$patienttype=$_REQUEST['patienttype'];
+			$stafftype=$_REQUEST['stafftype'];
 
 			$con=mysqli_connect('127.0.0.1','root','','webtech');
 
-			$sql = "insert into user values('{$id}','{$name}','{$gender}','{$dob}','{$bg}','{$marstatus}','{$email}','{$phnumber}','{$address}','{$ecp}','{$ecn}','{$relation}','{$password}','{$picname}','{$type}','{$patienttype}')";
+			$sql = "insert into user values('{$id}','{$name}','{$gender}','{$dob}','{$bg}','{$marstatus}','{$email}','{$phnumber}','{$address}','{$ecp}','{$ecn}','{$relation}','{$password}','{$picname}','{$type}','{$stafftype}')";
 			if(mysqli_query($con, $sql))
 			{
 			echo "Registration done!";
-			header("location:home.php");
+			header("location:../views/home.php");
 
 			}
 			else
@@ -83,11 +82,9 @@ if(isset($_REQUEST['submit']))
 		}
 	}
 }
-
 else
 {
-	header("location:docpatregister.php");
+	header("location:staffregistration.php");
 }
-
 
 ?>

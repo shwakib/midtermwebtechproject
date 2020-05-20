@@ -52,7 +52,7 @@
 		}
 	</script>
 
-	<form method="POST" action="registrationuser.php" enctype="multipart/form-data">
+	<form method="POST" action="../php/registrationuser.php" enctype="multipart/form-data">
 		<fieldset>
 			<legend>
 				Registration

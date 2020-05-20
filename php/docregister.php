@@ -5,7 +5,7 @@ if(isset($_REQUEST['submit']))
 	if(empty($_REQUEST['rid']) || empty($_REQUEST['rname']) || empty($_REQUEST['gender']) || empty($_REQUEST['rdate']) || empty($_REQUEST['rbloodgroup']) || empty($_REQUEST['marstatus'])||empty($_REQUEST['remail'])|| empty($_REQUEST['rnumber'])||empty($_REQUEST['raddress'])||empty($_REQUEST['remname'])||empty($_REQUEST['remnumber'])||empty($_REQUEST['rrelastionship'])||empty($_REQUEST['rpassword'])||empty($_REQUEST['rconfirmpassword'])||empty($_REQUEST['docspecialization']))
 		{
 		echo "Field Cannot Be Empty";
-		header("location:docregistration.php");
+		header("location:../views/docregistration.php");
 		}
 
 	/*elseif (!preg_match("/^[a-zA-Z ]*$/",$_REQUEST['rname']) {
@@ -43,7 +43,7 @@ if(isset($_REQUEST['submit']))
 			
 
 			$filename=$_FILES['userpic']['name'];
-			$dest="upload/"."$name".".jpg";
+			$dest="../upload/"."$name".".jpg";
 			$picname=$name;
 			$src = $_FILES['userpic']['tmp_name'];
 			if(move_uploaded_file($src, $dest))
@@ -53,7 +53,7 @@ if(isset($_REQUEST['submit']))
 			}
 			else
 			{
-			echo "Error";
+			echo " Image Error";
 			}
 
 			$type='doctor';
@@ -69,7 +69,7 @@ if(isset($_REQUEST['submit']))
 			if(mysqli_query($con, $sql))
 			{
 			echo "Registration done!";
-			header("location:home.php");
+			header("location:../views/home.php");
 
 			}
 			else
@@ -85,7 +85,7 @@ if(isset($_REQUEST['submit']))
 }
 else
 {
-	header("location:docregistration.php");
+	header("location:../views/docregistration.php");
 }
 
 ?>

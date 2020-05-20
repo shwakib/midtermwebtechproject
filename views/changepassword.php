@@ -34,7 +34,7 @@
 		
 
 				var xhttp = new XMLHttpRequest();
-				xhttp.open("POST","changepasswordcheck.php",true);
+				xhttp.open("POST","../php/changepasswordcheck.php",true);
 				xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 				xhttp.send('pass='+password);
 
@@ -46,7 +46,7 @@
 						{
 							//alert("Okay ");
 							var xhttp = new XMLHttpRequest();
-							xhttp.open("POST","passwordverification.php",true);
+							xhttp.open("POST","../php/passwordverification.php",true);
 							xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 				xhttp.send('newpass='+newpassword+'&renewpass='+renewpassword);
 							xhttp.onreadystatechange = function()

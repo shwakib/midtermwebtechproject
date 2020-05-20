@@ -77,9 +77,9 @@
 </table>
 	<tr>
 		<td colspan="2">
-			<button><u><a href="viewusers.php">Update</a></u></button>
+			<button><u><a href="../views/viewusers.php">Update</a></u></button>
 				
-				<button><u><a href="viewusers.php">Back</a></u></button>
+				<button><u><a href="../views/viewusers.php">Back</a></u></button>
 				<button><u><a href="">Log Out</a></u></button>
 			</td>
 	</tr>

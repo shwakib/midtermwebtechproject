@@ -62,11 +62,11 @@
 					<td><?=$row['ecn']?></td>
 					<td><?=$row['relwadmin']?></td>
 
-					<td><img src="upload/<?=$row['name'].".jpg"?>" width="80px" height="80px"></td>
+					<td><img src="../upload/<?=$row['name'].".jpg"?>" width="80px" height="80px"></td>
 					<td><?=$row['type']?></td>
 					<td>
-						<a href="edituser.php?id=<?=$row['id']?>">Edit</a>|
-						<a href="deleteusers.php?id=<?=$row['id']?>">Delete</a>
+						<a href="../php/edituser.php?id=<?=$row['id']?>">Edit</a>|
+						<a href="../php/deleteusers.php?id=<?=$row['id']?>">Delete</a>
 
 						
 					</td>

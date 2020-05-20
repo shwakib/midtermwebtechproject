@@ -6,7 +6,7 @@
 		header("location:login.php");
 	}
 
-  $id=$_SESSION['id'];
+  $id=$_GET['id'];
   
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
   
   <tr>
     <td colspan="3" align="right" width="80%">
-        <?= $_SESSION['name']; ?>
+        
         <a href="home.php">Home</a>
       
     
@@ -41,7 +41,7 @@
       $sql = "select * from user where id='{$id}'";
       $result = mysqli_query($con, $sql);
       $row=mysqli_fetch_assoc($result);
-
+      
   ?>
 
   <tr>
@@ -71,7 +71,7 @@
     </td>
 
     <td>
-      <img src="upload/<?=$_SESSION['name'].".jpg"?>" width="125px" height="100px"/>
+      <img src="../upload/<?=$row['imgname'].".jpg"?>" width="125px" height="100px"/>
     </td>
   </tr>
 

@@ -39,7 +39,7 @@
 		//alert(cid);
 		//alert(uid);
 		var xhttp = new XMLHttpRequest();
-				xhttp.open("POST","complaintactionsubmit.php",true);
+				xhttp.open("POST","../php/complaintactionsubmit.php",true);
 				xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 				xhttp.send('cid='+cid+'&uid='+uid+'&date='+date+'&complaint='+complaint+'&action='+complaintaction+'&report='+creport);
 

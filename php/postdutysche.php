@@ -17,7 +17,7 @@
 			if(mysqli_query($con, $sql))
 			{
 				echo "Submission done!";
-				header("location:home.php");
+				header("location:../views/home.php");
 			}
 			else
 			{

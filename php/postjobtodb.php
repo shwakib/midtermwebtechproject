@@ -44,15 +44,15 @@ echo($councilreq);
 	//$sql1="insert into circularlist values(1,'{$pos}','{$dept}')";
 	//mysqli_query($con, $sql);
 
-		/*if(mysqli_query($con, $sql1))
+		if(mysqli_query($con, $sql1))
 			{
 			echo "Registration done!";
-			header("location:login.php");
+			header("location:../views/home.php");
 
 			}
 			else
 			{
 			echo "Error";
-			}*/
+			}
 
 ?>

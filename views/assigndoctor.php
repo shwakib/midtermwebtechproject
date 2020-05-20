@@ -16,7 +16,7 @@
 			//alert(selecteddept);
 
 			var xhttp = new XMLHttpRequest();
-				xhttp.open("GET","doctorbydept.php?dept="+selecteddept,true);
+				xhttp.open("GET","../php/doctorbydept.php?dept="+selecteddept,true);
 				/*xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');*/
 				xhttp.send();
 
@@ -54,7 +54,7 @@
 		var selecteddept=document.getElementById('patientdept').value;
 
 		var xhttp = new XMLHttpRequest();
-				xhttp.open("POST","admitpatient.php",true);
+				xhttp.open("POST","../php/admitpatient.php",true);
 				xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 				xhttp.send('name='+patientname+'&prob='+patientproblem+'&dept='+selecteddept+'&doc='+doctorname);
 				xhttp.onreadystatechange = function()
@@ -62,7 +62,7 @@
 					if (this.readyState == 4 && this.status == 200)
 					{
 						alert(this.responseText);
-						window.location.href="home.php";
+						window.location.href="../views/home.php";
 					}
 				}
 	}

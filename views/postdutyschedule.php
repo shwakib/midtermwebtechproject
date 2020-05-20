@@ -4,7 +4,7 @@
 	<title>Duty Schedule</title>
 </head>
 <body>
-	<form method="POST" action="postdutysche.php">
+	<form method="POST" action="../php/postdutysche.php">
 
 	<fieldset>
 

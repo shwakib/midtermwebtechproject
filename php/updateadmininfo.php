@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$id=$_POST['rid'];
+	$id=$_SESSION['id'];
 
 	if(isset($_REQUEST['submit']))
 	{
@@ -16,11 +16,11 @@
 			
 			$con=mysqli_connect('127.0.0.1','root','','webtech');
 
-			$sql = "update user SET bg='{$bg}',marstatus='{$marstatus}',email='{$email}',contactnum='{$phnumber}',address='{$address}',ecp='{$ecp}',ecn='{$ecn}',relwadmin='{$relation}' WHERE id=$id";
+			$sql = "update user SET bg='{$bg}',marstatus='{$marstatus}',email='{$email}',contactnum='{$phnumber}',address='{$address}',ecp='{$ecp}',ecn='{$ecn}',relwadmin='{$relation}' WHERE id='$id'";
 				if(mysqli_query($con, $sql))
 				{
-				echo "Update Done!";
-				header("location:home.php");
+				echo "Registration done!";
+				header("location:../views/home.php");
 				}
 				else
 				{

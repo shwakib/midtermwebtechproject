@@ -18,7 +18,7 @@
 		//
 
 		var xhttp = new XMLHttpRequest();
-				xhttp.open("GET","searchpatientinfo.php?item="+searchitem,true);
+				xhttp.open("GET","../php/searchpatientinfo.php?item="+searchitem,true);
 				/*xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');*/
 				xhttp.send();
 

@@ -94,7 +94,7 @@
 				<a href="dutyschedule.php">Check Duty Schedule</a>
 			</td>
 			<td align="right">
-				<a href="logout.php">Log Out</a>
+				<a href="../php/logout.php">Log Out</a>
 			</td>
 		</tr>
 

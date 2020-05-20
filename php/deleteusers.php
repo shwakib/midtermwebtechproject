@@ -13,12 +13,12 @@
 				//header("location:viewusers.php");
 				if($id==$loginid)
 				{
-					header("location:login.php");
+					header("location:../views/login.php");
 					session_destroy();
 				}
 				else
 				{
-					header("location:viewusers.php");
+					header("location:../views/viewusers.php");
 				}
 			
 			}

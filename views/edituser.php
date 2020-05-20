@@ -23,7 +23,7 @@
 </head>
 <body>
 
-	<form method="POST" action="updateuserinfo.php">
+	<form method="POST" action="../php/updateuserinfo.php">
 		<fieldset>
 			<legend>
 				Update Profile
