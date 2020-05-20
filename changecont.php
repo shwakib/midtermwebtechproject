@@ -9,15 +9,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Login Page</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<form>
+	<form class="box">
 	<fieldset>
 	<legend>LOGIN</legend>
-		Current Contact: <input type="passsword" name="upassword" value=""> <br>
-		New Contact: <input type="password" name="nupassword" value=""><br>
-		-----------------------------------------------------<br>
+		Current Contact: <input type="text" name="" value=""> <br>
+		New Contact: <input type="text" name="" value=""><br>
 		<button><a href="patienthome.php">Change Contact</a></button>
         <u><a href="patienthome.php">Home</a></u>
 		</fieldset>

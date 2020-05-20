@@ -67,7 +67,7 @@
 				
               <!-- <input type="submit" name="insert" required placeholder="makeappoinment" > -->
               <!-- <input type="submit" name="submit" onclick="f1()" >--><button onclick="f1()">Submit</button>
-				<u><a href="home.php">Back</a></u>
+				<u><a href="patienthome.php">Back</a></u>
 				<u><a href="logout.php">Logout</a></u>
 		</fieldset>
 		</form>
