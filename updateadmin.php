@@ -1,4 +1,3 @@
-
 <?php
 	session_start();
 
@@ -6,17 +5,7 @@
 	{
 		header("location:login.php");
 	}
-
-	$id=$_GET['id'];
-
-	$con =mysqli_connect('127.0.0.1','root','','webtech');
-			$sql = "select * from user where id=$id";
-			$result = mysqli_query($con, $sql);
-			$row=mysqli_fetch_assoc($result);
 ?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +13,7 @@
 </head>
 <body>
 
-	<form method="POST" action="../php/updateuserinfo.php">
+	<form method="POST" action="updateadmininfo.php">
 		<fieldset>
 			<legend>
 				Update Profile
@@ -32,12 +21,12 @@
 				<table>
 					<tr>
 						<td>ID:</td>
-						<td><input type="text" value="<?=$row['id']?>" id="rid" name="rid" readonly></td>
+						<td><input type="text" value="<?=$_SESSION['id']?>" id="rid" name="rid" readonly></td>
 					</tr>
 
 					<tr>
 						<td>Name:</td>
-						<td><input type="text" id="rname" name="rname" value="<?=$row['name']?>" ></td>
+						<td><input type="text" id="rname" name="rname" value="<?=$_SESSION['name']?>" ></td>
 					</tr>
 
 
@@ -116,7 +105,7 @@
 
 					<tr>
 						<td>
-							Relationship with Emergency contacted person:
+							Relationship with Admin:
 						</td>
 						<td>
 							<input type="text" id="rrelastionship" name="rrelastionship">

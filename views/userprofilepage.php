@@ -1,206 +1,84 @@
-<<<<<<< HEAD
 <?php
-	session_start();
+  session_start();
 
-	if(!isset($_SESSION['name']))
-	{
-		header("location:login.php");
-	}
+  if(!isset($_SESSION['name']))
+  {
+    header("location:login.php");
+  }
 
   $id=$_GET['id'];
-  
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Patient Profile</title>
-</head>
-<body>
-	<form>
-	<fieldset>
-	
-	 <table  width="100%">
-  
-  <tr>
-    <td colspan="3" align="right" width="80%">
-        
-        <a href="home.php">Home</a>
-      
-    
-    
-      <a href="logout.php">Logout</a>
-    </td>
-    
-    
-      
-
-  </tr>
-
 
   <?php
       $con =mysqli_connect('127.0.0.1','root','','webtech');
-      $sql = "select * from user where id='{$id}'";
+      $sql = "select * from user where id=$id";
       $result = mysqli_query($con, $sql);
       $row=mysqli_fetch_assoc($result);
-      
+
   ?>
-
-  <tr>
-    <td  align="right" width="30%">
-      <b>ID: <br>
-      Name: <br>
-      Gender: <br>
-      Date Of Birth: <br>
-      Blood Group: <br>
-      Maritual Status: <br>
-      E-Mail: <br>
-      Contact Number:</b> <br>
-
-      
-    </td>
-
-    <td  align="">
-      <?=$row['id']?> <br>
-      <?=$row['name']?> <br>
-      <?=$row['gender']?> <br>
-      <?=$row['dob']?> <br>
-      <?=$row['bg']?> <br>
-      <?=$row['marstatus']?> <br>
-      <?=$row['email']?> <br>
-      <?=$row['contactnum']?> <br>
-
-    </td>
-
-    <td>
-      <img src="../upload/<?=$row['imgname'].".jpg"?>" width="125px" height="100px"/>
-    </td>
-  </tr>
-
-  <tr>
-    <td align="right" width="30%">
-      <b>Address: <br>
-      Emergency Contact Person: <br>
-      Emergency Contact Number: <br>
-      Relationship with:</b> <br>
-
-    </td>
-    <td colspan="2" align="left">
-      <i><?=$row['address']?></i> <br>
-      <?=$row['ecp']?> <br>
-      <?=$row['ecn']?> <br>
-      <?=$row['relwadmin']?> <br>
-    </td>
-  </tr>
-
-
-  
-
-  </table><br>
-
-		</fieldset>
-		</form>
-</body>
-=======
-<?php
-	session_start();
-
-	if(!isset($_SESSION['name']))
-	{
-		header("location:login.php");
-	}
-
-  $id=$_GET['id'];
-  
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Patient Profile</title>
+  <meta charset="utf-8">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="dpstyle.css">
 </head>
 <body>
-	<form>
-	<fieldset>
-	
-	 <table  width="100%">
-  
-  <tr>
-    <td colspan="3" align="right" width="80%">
-        
-        <a href="home.php">Home</a>
-      
+<style type="text/css">
+  div.a {
+  text-transform: uppercase;
+}
+</style>
+  <div class="profile">
+    <img src="../upload/<?=$row['name'].".jpg"?>" alt="Avatar" class="pp">
+    <h1 class="name"><?=$row['name']?></h1>
+    <h4 class="tags"><p><i><?=$row['id']?></i><br><br><b>Contact No:</b><?=$row['contactnum']?><br>
+<b>Email:</b><?=$row['email']?><br></h4>
+<h4 class="location"><i class="fas fa-map-marker-alter"></i><?=$row['address']?></h4>
+
+<p class="intro">
+  <div class="a"><?=$row['type']?>,<?=$row['usertype']?></div>
+</p>
+<div class="edu">
+  <h1>Information</h1>
+</div>
+<div class="details">
+  <div class="info">
     
-    
-      <a href="logout.php">Logout</a>
-    </td>
-    
-    
-      
+ 
+ <i><b>Date Of Birth:<?=$row['dob']?></b><br><b>Gender:</b><?=$row['gender']?><br>
+ <b>Blood Group:</b><?=$row['bg']?><br>
+<b>Maritual Status</b><?=$row['marstatus']?><br>
+<b>Gender:</b><?=$row['gender']?><br></i>
+  </div>
+  <div class="info">
+    <li><b>Emergency Contact information</b></li>
+ <i>Emergency Contact Person :<?=$row['ecp']?><br><b>Emergency Contact Number:</b><?=$row['ecn']?><br>
+ </div>
 
-  </tr>
+  </div> 
+  <div class="education">
+    <div class="info">
+  <b>Relation With Emergency Contact Person: <?=$row['relwadmin']?></b>
 
-
-  <?php
-      $con =mysqli_connect('127.0.0.1','root','','webtech');
-      $sql = "select * from user where id='{$id}'";
-      $result = mysqli_query($con, $sql);
-      $row=mysqli_fetch_assoc($result);
-      
-  ?>
-
-  <tr>
-    <td  align="right" width="30%">
-      <b>ID: <br>
-      Name: <br>
-      Gender: <br>
-      Date Of Birth: <br>
-      Blood Group: <br>
-      Maritual Status: <br>
-      E-Mail: <br>
-      Contact Number:</b> <br>
-
-      
-    </td>
-
-    <td  align="">
-      <?=$row['id']?> <br>
-      <?=$row['name']?> <br>
-      <?=$row['gender']?> <br>
-      <?=$row['dob']?> <br>
-      <?=$row['bg']?> <br>
-      <?=$row['marstatus']?> <br>
-      <?=$row['email']?> <br>
-      <?=$row['contactnum']?> <br>
-
-    </td>
-
-    <td>
-      <img src="../upload/<?=$row['imgname'].".jpg"?>" width="125px" height="100px"/>
-    </td>
-  </tr>
-
-  <tr>
-    <td align="right" width="30%">
-      <b>Address: <br>
-      Emergency Contact Person: <br>
-      Emergency Contact Number: <br>
-      Relationship with:</b> <br>
-
-    </td>
-    <td colspan="2" align="left">
-      <i><?=$row['address']?></i> <br>
-      <?=$row['ecp']?> <br>
-      <?=$row['ecn']?> <br>
-      <?=$row['relwadmin']?> <br>
-    </td>
-  </tr>
+</div>
+  </div>
+ 
+ 
 
 
   
+<div class="c2a">
+  
+  
+  <a href="viewusers.php" class="back"><i class="fas fa-envelope"></i>Back</a>
+  <a href="../php/logout.php" class="Contact"><i class="fas fa-envelope"></i>Log Out</a>
 
-  </table><br>
+  
+</div>
 
-		</fieldset>
-		</form>
+  </div>
 </body>
->>>>>>> 01ac521afefbe148bd28eb75166f3ebd7f222166
 </html>

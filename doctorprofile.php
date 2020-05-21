@@ -1,20 +1,11 @@
-<?php
-	session_start();
 
-	if(!isset($_SESSION['name']))
-	{
-		header("location:login.php");
-	}
-
-	$name=$_SESSION['name'];
-?>
 <!DOCTYPE html>
 <html>
 <head>
 
 	<?php
       $con =mysqli_connect('127.0.0.1','root','','webtech');
-      $sql = "select * from user where name='{$name}'";
+      $sql = "select * from user where id=123";
       $result = mysqli_query($con, $sql);
       $row=mysqli_fetch_assoc($result);
 
@@ -30,7 +21,7 @@
 }
 </style>
 	<div class="profile">
-		<img src="../upload/<?=$row['name'].".jpg"?>" alt="Avatar" class="pp">
+		<img src="upload/<?=$row['name'].".jpg"?>" alt="Avatar" class="pp">
 		<h1 class="name"><?=$row['name']?></h1>
 		<h4 class="tags"><p><i><?=$row['id']?></i><br><br><b>Contact No:</b><?=$row['contactnum']?><br>
 <b>Email:</b><?=$row['email']?><br></h4>
@@ -47,7 +38,7 @@
 		
  
  <i><b>Date Of Birth:<?=$row['dob']?></b><br><b>Gender:</b><?=$row['gender']?><br>
- <b>Blood Group:</b><?=$row['bg']?><br>
+ <b>Blood Group</b><?=$row['bg']?><br>
 <b>Maritual Status</b><?=$row['marstatus']?><br>
 <b>Gender:</b><?=$row['gender']?><br></i>
 	</div>
