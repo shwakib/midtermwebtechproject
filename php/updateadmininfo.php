@@ -5,6 +5,16 @@
 
 	if(isset($_REQUEST['submit']))
 	{
+
+		if(empty($_REQUEST['rbloodgroup'])||empty($_REQUEST['marstatus'])||empty($_REQUEST['remail'])||empty($_REQUEST['rnumber'])||empty($address=$_REQUEST['raddress'])||empty($_REQUEST['remname'])||empty($ecn=$_REQUEST['remnumber'])||empty($_REQUEST['rrelastionship']))
+		{
+			echo "Null submission found";
+			header("location:../views/updateadmin.php");
+		}
+		else
+		{
+
+
 			
 			$bg=$_REQUEST['rbloodgroup'];
 			$marstatus=$_REQUEST['marstatus'];
@@ -27,6 +37,7 @@
 				{
 				echo "Error";
 				}
+		}
 	}
 	else
 	{
