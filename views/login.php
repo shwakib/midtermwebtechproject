@@ -44,7 +44,7 @@
 						}
 						else if(this.responseText.match('patient'))
 						{
-							window.location.href='patienthome.php';
+							window.location.href='adminprofile.php';
 						}
 						else if(this.responseText.match('staff'))
 						{
