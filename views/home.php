@@ -22,7 +22,7 @@
 	<!-- <table  align="center">
 		<tr>
 			<td colspan="3" align="center">
-				Welcome <?= $_SESSION['name'] ?> 
+				Welcome <?= $_SESSION['name'] ?>
 			</td>
 		</tr>
 		<tr>
@@ -32,10 +32,10 @@
 			<td colspan="2" align="right">
 				<a href="adminprofile.php"><?= $_SESSION['name'] ?></a> <br>
 			</td>
-			
 
-			
-			
+
+
+
 		</tr>
 
 		<tr>
@@ -47,9 +47,9 @@
 			</td>
 			<td align="right">
 				<a href="assigndoctor.php">Admit Patient</a><br>
-				
+
 			</td>
-			
+
 		</tr>
 
 		<tr>
@@ -64,7 +64,7 @@
 			</td>
 		</tr>
 
-		
+
 
 		<tr>
 			<td >
@@ -79,10 +79,10 @@
 
 
 
-			
+
 		</tr>
 
-		
+
 
 		<tr>
 			<td>
@@ -96,7 +96,7 @@
 			</td>
 		</tr>
 
-		
+
 
 	</table> -->
 
@@ -105,11 +105,11 @@
 	<table >
 
 		<tr>
-			
+
 			<td colspan="3" align="center">
-				Welcome <?= $_SESSION['name'] ?> 
+				Welcome <?= $_SESSION['name'] ?>
 			</td>
-		
+
 		</tr>
 
 
@@ -134,7 +134,7 @@
 			<td>
 				<a href="assigndoctor.php">Admit Patient</a><br>
 			</td>
-			
+
 		</tr>
 		<tr>
 			<td>
@@ -193,3 +193,5 @@
 	</fieldset>
 
 </body>
+
+</html>

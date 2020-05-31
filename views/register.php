@@ -25,9 +25,9 @@ input {
 
 
 
-	
 
-<script type="text/javascript" src="check.js"></script>
+
+<script type="text/javascript" src="../js/check.js"></script>
 
 	<form method="POST" action="../php/registrationuser.php" enctype="multipart/form-data">
 		<fieldset>
@@ -36,23 +36,23 @@ input {
 			</legend>
 				<table>
 
-					
+
 					<tr>
 						<td>ID:</td>
 						<td><input type="text" id="rid" name="rid" onkeyup="f3()">
 							<div id="iderrordiv"></div></td>
 					</tr>
 
-					
+
 
 					<tr>
 						<td>Name:</td>
 						<td><input type="text" id="rname" name="rname"></td>
 					</tr>
 
-					
 
-					
+
+
 
 					<tr>
 						<td>Gender:</td>
@@ -85,14 +85,14 @@ input {
 								<option value="O-">O-</option>
 							</select>
 						</td>
-					</tr>	
+					</tr>
 
 					<tr>
 						<td>Maritual Status:</td>
 						<td>
 							<input type="radio" id="marstatus" name="marstatus" value="Single">Single
 							<input type="radio" id="marstatus" name="marstatus" value="Married">Married
-							
+
 						</td>
 					</tr>
 
@@ -121,7 +121,7 @@ input {
 
 						<td>
 							<textarea id="raddress" name="raddress">
-								
+
 							</textarea>
 						</td>
 					</tr>
@@ -164,10 +164,10 @@ input {
 						<td>Confirm Password:</td>
 						<td><input type="password" id="rconfirmpassword" name="rconfirmpassword"></td>
 					</tr>
-					
+
 					<tr>
 						<td>
-							Image: 
+							Image:
 						</td>
 						<td>
 							<input type="file" name="userpic">
@@ -178,31 +178,31 @@ input {
 						<td colspan="2">
 
 							<div id="registerdiv">
-								
+
 							</div>
-							
+
 						</td>
-						
+
 					</tr>
-					
+
 
 					<tr>
 						<td>
-										<input type="submit" name="submit" value="Create Account" >	
+										<input type="submit" name="submit" value="Create Account" >
 										<a href="login.php">Login</a>
 						</td>
 						<td align="right">
 							<a href="../views/login.php" align="right">Home</a>
 						</td>
-					</tr>	
-
-						
-
-						
-				</table> 
+					</tr>
 
 
-			
+
+
+				</table>
+
+
+
 
 
 		</fieldset>

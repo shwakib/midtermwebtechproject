@@ -9,28 +9,9 @@
 ?>
 
 
-<script type="text/javascript">
-	
-	function f2()
-	{
-		var searchitem=document.getElementById('ptsearch').value;
-		//alert(searchitem);
+<script type="text/javascript" src="../js/searchpatient.js">
 
-		//
 
-		var xhttp = new XMLHttpRequest();
-				xhttp.open("GET","../php/searchpatientinfo.php?item="+searchitem,true);
-				/*xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');*/
-				xhttp.send();
-
-				xhttp.onreadystatechange = function()
-				{
-					if (this.readyState == 4 && this.status == 200)
-					{
-						document.getElementById('searchresult').innerHTML=this.responseText;
-					}
-				}
-	}
 </script>
 
 <!DOCTYPE html>
@@ -42,8 +23,8 @@
 		<table align="center" >
 			<tr>
 				<td colspan="2">
-					User Search 
-				</td> 
+					User Search
+				</td>
 			</tr>
 			<tr>
 				<td>
@@ -61,9 +42,9 @@
 			</tr>
 
 		</table>
-			
+
 		<div id="searchresult"  align="center">
-			
+
 		</div>
 
 		<table align="center">

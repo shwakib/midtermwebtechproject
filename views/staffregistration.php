@@ -30,7 +30,7 @@ input {
 }
 </style>
 
-<script type="text/javascript" src="check.js"></script>
+<script type="text/javascript" src="../js/check.js"></script>
 
 	<form method="POST" action="../php/staffregister.php" enctype="multipart/form-data">
 		<fieldset>
@@ -49,9 +49,9 @@ input {
 						<td><input type="text" name="rname"></td>
 					</tr>
 
-					
 
-					
+
+
 
 					<tr>
 						<td>Gender:</td>
@@ -84,14 +84,14 @@ input {
 								<option value="O-">O-</option>
 							</select>
 						</td>
-					</tr>	
+					</tr>
 
 					<tr>
 						<td>Maritual Status:</td>
 						<td>
 							<input type="radio" name="marstatus" value="Single">Single
 							<input type="radio" name="marstatus" value="Married">Married
-							
+
 						</td>
 					</tr>
 
@@ -117,7 +117,7 @@ input {
 
 						<td>
 							<textarea name="raddress">
-								
+
 							</textarea>
 						</td>
 					</tr>
@@ -160,15 +160,15 @@ input {
 						<td>Confirm Password:</td>
 						<td><input type="password" name="rconfirmpassword"></td>
 					</tr>
-					
+
 					<tr>
 						<td>
-							Image: 
+							Image:
 						</td>
 						<td>
 							<input type="file" name="userpic">
 						</td>
-					</tr>	
+					</tr>
 
 					<tr>
 						<td>
@@ -179,7 +179,7 @@ input {
 								<option value="Nurse">Nurse</option>
 								<option value="Reciptionist">Reciptionist</option>
 							</select>
-							
+
 						</td>
 					</tr>
 
@@ -194,24 +194,24 @@ input {
 								<option value="Surgeon">Surgeon</option>
 								<option value="Cardiology">Cardiology</option>
 							</select>
-							
+
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-										<input type="submit" name="submit" value="Create Account">	
-										
+										<input type="submit" name="submit" value="Create Account">
+
 						</td>
 						<td align="right">
 							<a href="home.php" align="right">Home</a>
-							
+
 						</td>
-					</tr>				
-				</table> 
+					</tr>
+				</table>
 
 
-			
+
 
 
 		</fieldset>
