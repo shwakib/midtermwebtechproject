@@ -189,10 +189,10 @@ input {
 					<tr>
 						<td>
 										<input type="submit" name="submit" value="Create Account" >
-										<a href="login.php">Login</a>
+										<a href="login.html">Login</a>
 						</td>
 						<td align="right">
-							<a href="../views/login.php" align="right">Home</a>
+
 						</td>
 					</tr>
 

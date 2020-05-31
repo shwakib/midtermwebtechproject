@@ -2,9 +2,9 @@
 <?php
 
 	$name=$_POST['name'];
-	
+
 	$dept=$_POST['dept'];
-	$doc=$_POST['doc'];	
+	$doc=$_POST['doc'];
 
 
 
@@ -13,8 +13,8 @@
 			$sql = "insert into assignednurse values('{$name}','{$dept}','{$doc}')";
 			if(mysqli_query($con, $sql))
 			{
-			echo "Admission done!";
-			
+			echo "Assigned!";
+
 
 			}
 			else

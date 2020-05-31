@@ -15,7 +15,7 @@ if(isset($_REQUEST['submit']))
 		$id=$_REQUEST['uid'];
 		$pass=$_REQUEST['upassword'];
 		$myfile=fopen('userregistration.txt', 'r');
-		while(!feof($myfile)) 
+		while(!feof($myfile))
 		{
 			$line=fgets($myfile);
 			$data=explode("|", $line);
@@ -77,15 +77,15 @@ if(isset($_POST['uid']))
 
 		if(count($user)>0)
 		{
-			sleep(2);
+			//sleep(2);
 			setcookie('id',$id, time()+3600, '/');
 			echo trim($user['type']);
 			$_SESSION['id']= $id;
 			$_SESSION['pass']= $pass;
 			$_SESSION['type']= $user['type'];
 			$_SESSION['name']= $user['name'];
-			
-			
+
+
 		}
 		else
 		{
@@ -96,5 +96,3 @@ if(isset($_POST['uid']))
 }
 
 ?>
-
-
