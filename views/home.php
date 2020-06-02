@@ -6,7 +6,7 @@
 
 	if(!($_SESSION['type']=='admin'))
 	{
-		header("location:login.php");
+		header("location:login.html");
 		session_destroy();
 	}
 ?>

@@ -1,38 +1,30 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Login Page</title>
-</head>
-<body>
-
-	<script type="text/javascript" src="../js/login.js">
+<html lang="en" dir="ltr">
+  <head>
 
 
-	</script>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/login.css">
 
-	<form method="POST">
-		<fieldset align="center">
-			<legend>
-				LOGIN
-			</legend>
+  </head>
+  <body>
 
-				<center>
-							<br>
-							<input type="text" name="uid" id="uid" value="" placeholder="Enter your user ID"> <br>
-							 <br>
-							<input type="password" id="upassword" value="" placeholder="Enter your Password">
-							<p id="loginmsg"></p>
-							<input type="button" name="submit" value="Login" onclick="f1()">
-							<u><a href="register.php">Register</a></u>
-				</center>
+    <script type="text/javascript" src="../js/login.js">
 
 
+    </script>
+    <form class="box" >
+      <h1>Login</h1>
+      <input type="text" name="uid" id="uid" placeholder="Enter  Your ID">
+      <input type="password" name="upassword" id="upassword" placeholder="Enter Your Password">
+      <div id="loginmsg">
 
-		</fieldset>
+      </div>
+      <input type="button" name="submit" value="Login" onclick="f1()">
+      <a href="register.html">Register</a>
 
+    </form>
 
-	</form>
-
-</body>
+  </body>
 </html>

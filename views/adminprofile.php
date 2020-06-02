@@ -21,7 +21,7 @@
   ?>
 	<meta charset="utf-8">
 	<title>User Profile</title>
-	<link rel="stylesheet" href="dpstyle.css">
+	<link rel="stylesheet" href="../css/dpstyle.css">
 </head>
 <body>
 <style type="text/css">
@@ -44,8 +44,8 @@
 </div>
 <div class="details">
 	<div class="info">
-		
- 
+
+
  <i><b>Date Of Birth:<?=$row['dob']?></b><br><b>Gender:</b><?=$row['gender']?><br>
  <b>Blood Group:</b><?=$row['bg']?><br>
 <b>Maritual Status</b><?=$row['marstatus']?><br>
@@ -56,25 +56,25 @@
  <i>Emergency Contact Person :<?=$row['ecp']?><br><b>Emergency Contact Number:</b><?=$row['ecn']?><br>
  </div>
 
-	</div> 
+	</div>
 	<div class="education">
 		<div class="info">
  	<b>Relation With Emergency Contact Person: <?=$row['relwadmin']?></b>
 
 </div>
 	</div>
- 
- 
 
 
-	
+
+
+
 <div class="c2a">
-	
+
 	<a href="viewusers.php" class="see"><i class="fas fa-envelope"></i>See Users</a>
 	<a href="home.php" class="back"><i class="fas fa-envelope"></i>Back</a>
 	<a href="../php/logout.php" class="Contact"><i class="fas fa-envelope"></i>Log Out</a>
 
-	
+
 </div>
 
 	</div>
